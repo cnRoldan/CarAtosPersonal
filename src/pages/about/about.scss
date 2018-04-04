@@ -1,0 +1,29 @@
+.page-about {
+  background-color: rgb(235, 235, 235);
+
+}
+.border-rad{
+  border-radius: 12px;
+}
+
+
+.iconos-sm{
+  font-size: 20px;
+}
+
+.iconos-md{
+  font-size: 30px;
+}
+
+.iconos-lg{
+  font-size: 50px;
+}
+.border-zero{
+  position:absolute;
+   top:0;
+   right:0;
+   z-index:300;
+   min-width:0;
+   width:8%;
+
+}
