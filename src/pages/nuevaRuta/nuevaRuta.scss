@@ -22,16 +22,16 @@ page-contact {
 }
 .dia{
   color: rgb(0, 0, 0);
-  border: solid rgb(38, 38, 38) 1px;
+  border: solid rgb(45, 44, 44) 1px;
   padding-top:3px;
   padding-left: 17px;
   padding-right: 17px;
 }
 .dia:hover{
-  background-color: rgb(93, 93, 93);
+  background-color: rgb(102, 102, 102);
 }
 .selected-dia{
-  background-color: rgb(93, 93, 93);
+  background-color: rgb(102, 102, 102);
 }
 
 .selected-dia:hover{
@@ -44,5 +44,5 @@ page-contact {
 
 #map {
       width: 100%;
-      height: 100%;
+      height: 50%;
       }
