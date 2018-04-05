@@ -36,6 +36,7 @@ export class LoginPage {
          subTitle: text,
          buttons: ['OK']
        });
+       return alert;
      }
 
 
