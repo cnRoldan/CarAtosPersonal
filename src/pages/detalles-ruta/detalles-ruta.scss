@@ -1,3 +1,57 @@
 page-detalles-ruta {
 
 }
+
+.image-perfil{
+  height: 100px;
+  width: 100px;
+}
+.usuario{
+  margin: auto;
+  margin-left: 0px;
+  margin-right: 15px;
+  display:grid;
+}
+.nombre-usuario{
+  margin: auto;
+}
+.sitio-libre{
+opacity: .55;
+}
+
+
+.semanar-contenedor{
+  background-size: cover;
+}
+
+.semanar{
+  display:flex;
+  font-size: 15px;
+  width:90%;
+  margin:0 auto;
+
+}
+.diar:first-child{
+  border-top-left-radius: 10px ;
+  border-bottom-left-radius: 10px ;
+
+}
+.diar:last-child{
+  border-top-right-radius: 10px ;
+  border-bottom-right-radius: 10px ;
+
+}
+.diar{
+  color: rgb(0, 0, 0);
+  border: solid rgb(45, 44, 44) 1px;
+  padding-top:3px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.selected-diar{
+  background-color: rgb(102, 102, 102);
+}
+.text-wrap{
+  white-space: normal;
+  word-wrap: normal;
+}
