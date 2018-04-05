@@ -2,13 +2,15 @@ page-contact {
 
 }
 .semana-contenedor{
-  align-items: center;
+  background-size: cover;
 }
+
 .semana{
-  float:left;
-  display: flex;
-  align-items: center;
-    font-size: 15px;
+  display:flex;
+  font-size: 15px;
+  width:90%;
+  margin:0 auto;
+
 }
 .dia:first-child{
   border-top-left-radius: 10px ;
