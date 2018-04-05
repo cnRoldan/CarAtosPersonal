@@ -1,9 +1,43 @@
 <ion-header >
   <ion-navbar color="secondary">
-    <ion-title>Rutas</ion-title>
+    <ion-title>Mi Perfil</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="page-perfil">
+  <ion-card class="border-card">
+    <ion-card-content class="border-card">
+      <ion-item>
+        <img src="https://images.vexels.com/media/users/3/140750/isolated/preview/c9b1b66ee3fc60f9bb0aa9a5bee63a9f-perfil-masculino-avatar-2-by-vexels.png" class="image-perfil" item-left>
+        <p class="perfil-header">
+          Nombre
+        </p>
+        <hr>
+        <p>
+          Correo usuario
+        </p>
+        <hr>
+        <p>
+          Telefono
+        </p>
+        <hr>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+  <ion-card-content>
+    <ion-icon name="ios-map-outline" class="iconos-perfil"></ion-icon>
+    <input type="text" name="ruta" value="" placeholder="Mis Rutas" class="input-perfil">
+    <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" class="iconos-perfil"></ion-icon>
+      <button ion-item>
+        c/ La Matanza de Acentejo - Los Cristianos
+      </button>
+      <button ion-item>
+        Avda. Tres de Mayo - Los Cardones
+      </button>
+      <ion-item ><div #map id="map"></div></ion-item>
+  </ion-card-content>
+</ion-card>
+
 
 </ion-content>
