@@ -18,6 +18,42 @@
 .iconos-lg{
   font-size: 50px;
 }
+
+.parpadea {
+
+  animation-name: parpadeo;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo{
+  0% { opacity: 1.0; }
+  50% { opacity: 0.40; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes parpadeo {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.40; }
+   100% { opacity: 1.0; }
+}
+
+@keyframes parpadeo {
+  0% { opacity: 1.0; }
+   50% { opacity: 0.40; }
+  100% { opacity: 1.0; }
+}
+
+.sitio-libre{
+opacity: .55;
+}
+
 .border-zero{
   position:absolute;
    top:0;
@@ -25,5 +61,4 @@
    z-index:300;
    min-width:0;
    width:8%;
-
 }
