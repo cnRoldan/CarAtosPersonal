@@ -1,9 +1,63 @@
 <ion-header >
   <ion-navbar color="secondary">
-    <ion-title>Rutas</ion-title>
+    <ion-title>Crear Rutas</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">Origen : </ion-label>
+      <ion-input placeholder="De....."></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Destino : </ion-label>
+      <ion-input placeholder="Hasta....."></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-toolbar class="semana-contenedor">
+      <div color="primary" class="semana">
+        <ion-segment-button value="L" class="dia selected-dia" >
+          <strong>L</strong>
+        </ion-segment-button>
+        <ion-segment-button value="M" class="dia selected-dia" >
+          <strong>M</strong>
+        </ion-segment-button>
+        <ion-segment-button value="X" class="dia selected-dia" >
+          <strong>X</strong>
+        </ion-segment-button>
+        <ion-segment-button value="J" class="dia selected-dia" >
+          <strong>J</strong>
+        </ion-segment-button>
+        <ion-segment-button value="V" class="dia selected-dia" >
+          <strong>V</strong>
+        </ion-segment-button>
+        <ion-segment-button value="S" class="dia" >
+          <strong>S</strong>
+        </ion-segment-button>
+        <ion-segment-button value="D" class="dia" >
+          <strong>D</strong>
+        </ion-segment-button>
+      </div>
+    </ion-toolbar>
+
+    <ion-list>
+      <hr>
+      <ion-item>
+        <ion-label color="primary">Salir casa : </ion-label>
+        <ion-datetime displayFormat="hh:mm" placeholder="Introduce hora..."></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary">Salir trabajo : </ion-label>
+        <ion-datetime displayFormat="hh:mm" placeholder="Introduce hora..."></ion-datetime>
+      </ion-item>
+    </ion-list>
+
+    <ion-content>
+      <div #map id="map"></div>
+    </ion-content>
+
 
 </ion-content>
