@@ -10,6 +10,7 @@ import { nuevaRutaPage } from '../pages/nuevaRuta/nuevaRuta';
 import { perfilPage } from '../pages/perfil/perfil';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DetallesRutaPage } from '../pages/detalles-ruta/detalles-ruta'
+import { RutaPerfilPage } from '../pages/ruta-perfil/ruta-perfil';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -28,6 +29,7 @@ import { HttpModule } from '@angular/http';
     nuevaRutaPage,
     LoginPage,
     DetallesRutaPage,
+    RutaPerfilPage,
     TabsPage
   ],
   imports: [
@@ -44,6 +46,7 @@ import { HttpModule } from '@angular/http';
     nuevaRutaPage,
     LoginPage,
     DetallesRutaPage,
+    RutaPerfilPage,
     TabsPage
   ],
   providers: [

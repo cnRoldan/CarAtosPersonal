@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef} from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { RutaPerfilPage } from '../ruta-perfil/ruta-perfil';
 
 declare var google;
 @Component({
@@ -20,6 +21,9 @@ export class perfilPage {
     this.loadMap();
   }
 
+  onClickedItem(){
+    this.navCtrl.push(RutaPerfilPage);
+  }
   loadMap(){
 
 
