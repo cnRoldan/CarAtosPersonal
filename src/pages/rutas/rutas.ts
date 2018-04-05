@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { DetallesRutaPage } from '../detalles-ruta/detalles-ruta';
 
 @Component({
   selector: 'page-rutas',
@@ -7,8 +8,19 @@ import { NavController } from 'ionic-angular';
 })
 export class RutasPage {
 
+  rutaPrueba :Object = {
+    nombre:'Pochinki',
+    recorrido: 'Adeje - Punta Anaga Alta',
+    distancia: '(22 km)'
+  }
+
   constructor(public navCtrl: NavController) {
 
+  }
+
+  onClickedItem(ruta){
+    console.log(ruta);
+    this.navCtrl.push(DetallesRutaPage);
   }
 
 }
