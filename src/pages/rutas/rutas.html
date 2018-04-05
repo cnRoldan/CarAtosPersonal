@@ -5,6 +5,10 @@
 </ion-header>
 
 <ion-content  class="page-about">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+  <ion-refresher-content>
+  </ion-refresher-content>
+</ion-refresher>
   <ion-card class="border-rad">
     <ion-item (click)="onClickedItem(rutaPrueba)">
       <span icon-left clear item-end class="iconos-sm border-zero">
