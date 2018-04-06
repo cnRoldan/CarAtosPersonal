@@ -8,6 +8,7 @@
     <access launch-external="yes" subdomains="true" origin="https://*.whatsapp.com"/>
     <access launch-external="yes" origin="whatsapp:*"/>
     <access launch-external="yes" origin="https://*/*"/>
+    <allow-intent href="*://*.whatsapp.com/*" />
     <allow-intent href="whatsapp:*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
