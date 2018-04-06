@@ -10,6 +10,7 @@
     <access launch-external="yes" origin="https://*/*"/>
     <allow-intent href="*://*.whatsapp.com/*" />
     <allow-intent href="whatsapp:*" />
+    <allow-intent href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
