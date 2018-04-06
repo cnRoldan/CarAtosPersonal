@@ -36,8 +36,5 @@ export class perfilPage {
     }
 
     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-
-
   }
-
 }
