@@ -5,9 +5,9 @@
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
     <access origin="*" />
-    <access launch-external="yes" subdomains="true" origin="https://*.whatsapp.com"/>
-    <access launch-external="yes" origin="whatsapp:*"/>
-    <access launch-external="yes" origin="https://*/*"/>
+    <access launch-external="yes" origin="https://*.whatsapp.com" subdomains="true" />
+    <access launch-external="yes" origin="whatsapp:*" />
+    <access launch-external="yes" origin="https://*/*" />
     <allow-intent href="*://*.whatsapp.com/*" />
     <allow-intent href="whatsapp:*" />
     <allow-intent href="*" />
@@ -88,4 +88,5 @@
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
+    <engine name="android" spec="7.0.0" />
 </widget>
