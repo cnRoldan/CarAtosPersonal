@@ -5,6 +5,8 @@
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
     <access origin="*" />
+    <access launch-external="yes" origin="whatsapp:*"/>
+    <access launch-external="yes" origin="*"/>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
