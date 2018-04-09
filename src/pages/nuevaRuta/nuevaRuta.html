@@ -19,30 +19,14 @@
     </ion-list>
 </ion-card>
 
-      <div class="semana">
-        <ion-segment-button value="L" class="dia selected-dia" >
-          <strong>L</strong>
-        </ion-segment-button>
-        <ion-segment-button value="M" class="dia selected-dia" >
-          <strong>M</strong>
-        </ion-segment-button>
-        <ion-segment-button value="X" class="dia selected-dia" >
-          <strong>X</strong>
-        </ion-segment-button>
-        <ion-segment-button value="J" class="dia selected-dia" >
-          <strong>J</strong>
-        </ion-segment-button>
-        <ion-segment-button value="V" class="dia selected-dia" >
-          <strong>V</strong>
-        </ion-segment-button>
-        <ion-segment-button value="S" class="dia dia-festivo" >
-          <strong>S</strong>
-        </ion-segment-button>
-        <ion-segment-button value="D" class="dia dia-festivo" >
-          <strong>D</strong>
-        </ion-segment-button>
-      </div>
+<div >
+  <ion-segment [(ngModel)]="selected">
+    <ion-segment-button *ngFor="let dia of dias" [value]="dia">{{dia}}</ion-segment-button>
+  </ion-segment>
+</div>
 
+<div *ngFor="let dia of dias">
+  <ion-list *ngIf="selected==dia" ngSelected="selected" >
     <ion-card class="border-rad">
       <ion-list>
         <ion-item>
@@ -55,10 +39,9 @@
         </ion-item>
       </ion-list>
   </ion-card>
+  </ion-list>
+</div>
 
-  <ion-card class="border-rad">
-  <div #map id="map"></div>
-  </ion-card>
 
 
 
