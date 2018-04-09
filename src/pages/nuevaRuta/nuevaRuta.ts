@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController } from 'ionic-angular';
+// import { Day } from '../../classes/Day';
 
 declare var google;
 @Component({
@@ -21,7 +22,6 @@ export class nuevaRutaPage {
    }
 
    loadMap(){
-
 
      let origeLng = new google.maps.LatLng(28.241449902908233, -16.837590280950963);
      let destinoLng = new google.maps.LatLng(28.126584746441665, -16.56268612105714);

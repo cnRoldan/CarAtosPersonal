@@ -1,10 +1,10 @@
 <ion-content class="login-content" padding>
-  <ion-row class="logo-row">
+  <ion-row class="logo-row mx-auto">
     <ion-col></ion-col>
 
     <ion-col></ion-col>
   </ion-row>
-  <div class="login-box">
+  <div class="login-box animated fadeIn">
     <form (ngSubmit)="login()" #registerForm="ngForm">
       <ion-row>
         <ion-col>
@@ -24,7 +24,7 @@
 
       <ion-row>
         <ion-col class="signup-col">
-          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
+          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">ENTRAR</button>
           <button ion-button class="register-btn" block clear (click)="createAccount()">Crear una cuenta nueva</button>
         </ion-col>
       </ion-row>
