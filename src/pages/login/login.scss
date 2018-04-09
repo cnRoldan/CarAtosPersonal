@@ -1,15 +1,21 @@
 page-login {
 
   .login-content {
-    background-image: url(../../assets/imgs/seaTemplate.jpg);
+    // background-image: url(../../assets/imgs/aerial-architectural-design-architecture-373912.jpg);
+    // background-image: url(../../assets/imgs/city-lights-night-rooftop.jpg);
+    // background-image: url(../../assets/imgs/architecture-bicycles-buildings-763901.jpg);
+    // background-image: url(../../assets/imgs/volkswagen-auto-historically-vw-163809.jpeg);
+    background-image: url(../../assets/imgs/alessio-lin-208193-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 
     .logo-row {
-      margin-top: 120px;
+      width: 100%;
+      margin-top: 30%;
       padding-top: 50px;
       padding-bottom: 56px;
       background-image: url(../../assets/imgs/logoAtos.png);
+      // background-image: url(../../assets/imgs/logoAtosWhite.png);
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -30,9 +36,10 @@ page-login {
          padding-left: 30px !important;
          font-size: 0.9em;
          margin-bottom: 10px;
-         border: 1px solid #ffffff;
          border-bottom: 0px !important;
+         color: white;
          box-shadow: none !important;
+         background-color: rgba(254, 254, 254, 0.57);
      }
 
      .signup-col {
@@ -46,10 +53,9 @@ page-login {
      }
 
      .submit-btn {
-       background: #000000;
+       background: #0066a1;
        color:white;
        border-radius: 30px !important;
-       border: 1px solid #ffffff;
      }
 
      .register-btn {
