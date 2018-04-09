@@ -10,6 +10,7 @@ declare var google;
 export class perfilPage {
 
   @ViewChild('map') mapElement: ElementRef;
+
   map: any;
 
 
@@ -24,8 +25,8 @@ export class perfilPage {
   onClickedItem(){
     this.navCtrl.push(RutaPerfilPage);
   }
-  loadMap(){
 
+  loadMap(){
 
     let origeLng = new google.maps.LatLng(28.241449902908233, -16.837590280950963);
 
