@@ -12,6 +12,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { DetallesRutaPage } from '../pages/detalles-ruta/detalles-ruta'
 import { RutaPerfilPage } from '../pages/ruta-perfil/ruta-perfil';
 
+// Geolocation providers
+import { Geolocation } from '@ionic-native/geolocation';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
@@ -53,8 +56,9 @@ import { HttpModule } from '@angular/http';
     HttpClientModule,
     StatusBar,
     SplashScreen,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthServiceProvider
+    AuthServiceProvider,
   ]
 })
 export class AppModule {}

@@ -28,22 +28,45 @@
     </ion-card-content>
   </ion-card>
   <ion-card>
-  <ion-card-content>
-    <ion-grid>
-      <ion-row>
-        <ion-col col-2><ion-icon name="ios-map-outline" class="iconos-perfil"></ion-icon></ion-col>
-        <ion-col col-8 class="misrutas" (click)="onClickedItem()">Mis Rutas</ion-col>
-        <ion-col col-2><ion-icon ios="ios-arrow-forward" md="md-arrow-forward" class="iconos-perfil"></ion-icon></ion-col>
-      </ion-row>
-    </ion-grid>
-      <button ion-item>
-        c/ La Matanza de Acentejo - Los Cristianos
-      </button>
-      <button ion-item>
-        Avda. Tres de Mayo - Los Cardones
-      </button>
-      <ion-item ><div #map id="map"></div></ion-item>
-  </ion-card-content>
+
+
+      <ion-slides pager>
+
+        <ion-slide>
+          <ion-card-content>
+            <!--  -->
+            <ion-grid>
+              <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col col-8 class="misrutas" (click)="onClickedItem()">Ruta 1</ion-col>
+                <ion-col col-2><ion-icon class="iconos-perfil"></ion-icon></ion-col>
+              </ion-row>
+            </ion-grid>
+              <button ion-item (click)="onClickedItem()">
+                c/ La Matanza de Acentejo - Los Cristianos
+              </button>
+              <ion-item ><div #map id="map"></div></ion-item>
+          </ion-card-content>
+        </ion-slide>
+
+        <ion-slide >
+          <ion-card-content>
+            <!--  -->
+            <ion-grid>
+              <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col col-8 class="misrutas" (click)="onClickedItem()">Ruta 2</ion-col>
+                <ion-col col-2></ion-col>
+              </ion-row>
+            </ion-grid>
+              <button ion-item (click)="onClickedItem()">
+                c/ José Ventura - ITER Granadilla de Abona
+              </button>
+              <ion-item ><div #map id="map2"></div></ion-item>
+          </ion-card-content>
+        </ion-slide>
+
+    </ion-slides>
 </ion-card>
 
 
