@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { DetallesRutaPage } from '../detalles-ruta/detalles-ruta';
+import { nuevaRutaPage } from '../nuevaRuta/nuevaRuta';
 
 @Component({
   selector: 'page-rutas',
@@ -21,6 +22,10 @@ export class RutasPage {
   onClickedItem(ruta){
     console.log(ruta);
     this.navCtrl.push(DetallesRutaPage);
+  }
+  
+  nuevaRuta(){
+    this.navCtrl.push(nuevaRutaPage);
   }
 
   doRefresh(refresher) {

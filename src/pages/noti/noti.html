@@ -1,0 +1,47 @@
+<ion-header >
+  <ion-navbar color="secondary">
+    <ion-title>Notificaciones</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  class="page-about">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+  <ion-refresher-content>
+  </ion-refresher-content>
+</ion-refresher>
+  <ion-card class="border-rad">
+    <ion-item>
+      <h2><strong>Añadir Foto</strong></h2>
+      <p>Lo mejor es que añadas una foto.</p>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="border-rad">
+    <ion-item>
+      <h2><strong>Benjamito ha salido de la ruta</strong></h2>
+      <p>Benjamito, ha dejado de compartir el coche contigo.</p>
+  </ion-item>
+</ion-card>
+
+<ion-card class="border-rad">
+  <ion-item>
+    <h2><strong>Curandero quiere subirse a tu coche.</strong></h2>
+    <p>Curandero, te ha enviado una solicitud para una plaza.</p>
+</ion-item>
+</ion-card>
+
+<ion-card class="border-rad">
+  <ion-item>
+    <h2><strong>Pavlo quiere ser tu amigo.</strong></h2>
+    <p>Pavlo, quiere ser tu amigo. ¡Aceptalo!</p>
+</ion-item>
+</ion-card>
+
+<ion-card class="border-rad">
+  <ion-item>
+    <h2><strong>Benjamito ha salido de la ruta</strong></h2>
+    <p>Benjamito, ha dejado de compartir el coche contigo.</p>
+</ion-item>
+</ion-card>
+
+</ion-content>

@@ -1,7 +1,7 @@
 <ion-header >
   <ion-navbar color="secondary">
     <ion-title>Rutas</ion-title>
-    <ion-buttons end> <i class="fa fa-search icono-blanco"></i></ion-buttons>
+    <ion-buttons end> <a class="fa fa-search icono-blanco" href="https://www.google.es"></a></ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -57,8 +57,8 @@
   </ion-item>
 </ion-card>
 
-<ion-fab right bottom >
-   <a ion-fab color="secondary" style="text-decoration:none" href="https://www.google.es"><i class="fa fa-plus fa-lg"></i></a>
+<ion-fab right bottom (click)="nuevaRuta()" >
+   <div ion-fab color="secondary" style="text-decoration:none"><i class="fa fa-plus fa-lg"></i></div>
  </ion-fab>
 
 
