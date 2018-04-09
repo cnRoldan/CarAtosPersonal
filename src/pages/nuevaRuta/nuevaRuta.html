@@ -6,19 +6,20 @@
 
 <ion-content padding>
 
-  <ion-list>
-    <ion-item>
-      <ion-label color="primary">Origen : </ion-label>
-      <ion-input placeholder="De....."></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label color="primary">Destino : </ion-label>
-      <ion-input placeholder="Hasta....."></ion-input>
-    </ion-item>
-  </ion-list>
+  <ion-card class="border-rad">
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary">Origen : </ion-label>
+        <ion-input placeholder="De ..."></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary">Destino : </ion-label>
+        <ion-input placeholder="Hasta ..."></ion-input>
+      </ion-item>
+    </ion-list>
+</ion-card>
 
-  <ion-toolbar class="semana-contenedor">
-      <div color="primary" class="semana">
+      <div class="semana">
         <ion-segment-button value="L" class="dia selected-dia" >
           <strong>L</strong>
         </ion-segment-button>
@@ -34,29 +35,30 @@
         <ion-segment-button value="V" class="dia selected-dia" >
           <strong>V</strong>
         </ion-segment-button>
-        <ion-segment-button value="S" class="dia" >
+        <ion-segment-button value="S" class="dia dia-festivo" >
           <strong>S</strong>
         </ion-segment-button>
-        <ion-segment-button value="D" class="dia" >
+        <ion-segment-button value="D" class="dia dia-festivo" >
           <strong>D</strong>
         </ion-segment-button>
       </div>
-    </ion-toolbar>
 
-    <ion-list>
-      <hr>
-      <ion-item>
-        <ion-label color="primary">Salir casa : </ion-label>
-        <ion-datetime displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
-      </ion-item>
-      <ion-item>
-        <ion-label color="primary">Salir trabajo : </ion-label>
-        <ion-datetime displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
-      </ion-item>
-    </ion-list>
+    <ion-card class="border-rad">
+      <ion-list>
+        <ion-item>
+          <ion-label color="primary">Salir casa : </ion-label>
+          <ion-datetime displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary">Salir trabajo : </ion-label>
+          <ion-datetime displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
+        </ion-item>
+      </ion-list>
+  </ion-card>
 
-
-      <div #map id="map"></div>
+  <ion-card class="border-rad">
+  <div #map id="map"></div>
+  </ion-card>
 
       <ion-item >
         <button color="success" ion-button full round>Crear</button>

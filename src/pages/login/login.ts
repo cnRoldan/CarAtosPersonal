@@ -39,7 +39,6 @@ export class LoginPage {
        return alert;
      }
 
-
   public login() {
     this.showLoading()
     this.auth.login(this.registerCredentials).subscribe(allowed => {

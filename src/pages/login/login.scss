@@ -23,7 +23,8 @@ page-login {
 
     .login-box {
       padding: 0px 20px 0px 20px;
-      margin-top: 130px;
+      margin-top: 100px;
+      magin-bottom:50px;
     }
 
     ion-row {
@@ -37,9 +38,9 @@ page-login {
          font-size: 0.9em;
          margin-bottom: 10px;
          border-bottom: 0px !important;
-         color: white;
+         color: black;
          box-shadow: none !important;
-         background-color: rgba(254, 254, 254, 0.57);
+         background-color: rgba(255, 255, 255, 0.78);
      }
 
      .signup-col {
