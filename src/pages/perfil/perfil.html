@@ -6,7 +6,18 @@
 
 <ion-content class="page-perfil">
   <ion-card class="border-card">
-    <ion-card-content class="border-card">
+    <ion-item>
+      <img src="https://images.vexels.com/media/users/3/140750/isolated/preview/c9b1b66ee3fc60f9bb0aa9a5bee63a9f-perfil-masculino-avatar-2-by-vexels.png" class="image-perfil" item-left>
+      <h1>Juan José Portelo</h1>
+      <hr>
+      <h2>juanportesdfsdfdsffdsflo@gmail.com</h2>
+      <hr>
+      <a href="https://api.whatsapp.com/send?phone=34671202477&text=">
+                         +34 654 542 254<i class="fa fa-whatsapp fa-2x border-zero-whats" ></i>
+      </a>
+
+    </ion-item>
+    <!-- <ion-card-content class="border-card">
       <ion-item>
         <img src="https://images.vexels.com/media/users/3/140750/isolated/preview/c9b1b66ee3fc60f9bb0aa9a5bee63a9f-perfil-masculino-avatar-2-by-vexels.png" class="image-perfil" item-left>
         <p class="perfil-header">
@@ -25,25 +36,48 @@
       </a>
         <hr>
       </ion-item>
-    </ion-card-content>
+    </ion-card-content> -->
   </ion-card>
-  <ion-card>
-  <ion-card-content>
-    <ion-grid>
-      <ion-row>
-        <ion-col col-2><ion-icon name="ios-map-outline" class="iconos-perfil"></ion-icon></ion-col>
-        <ion-col col-8 class="misrutas" (click)="onClickedItem()">Mis Rutas</ion-col>
-        <ion-col col-2><ion-icon ios="ios-arrow-forward" md="md-arrow-forward" class="iconos-perfil"></ion-icon></ion-col>
-      </ion-row>
-    </ion-grid>
-      <button ion-item>
-        c/ La Matanza de Acentejo - Los Cristianos
-      </button>
-      <button ion-item>
-        Avda. Tres de Mayo - Los Cardones
-      </button>
-      <ion-item ><div #map id="map"></div></ion-item>
-  </ion-card-content>
+  <ion-card class="border-card">
+
+
+      <ion-slides pager>
+
+        <ion-slide>
+          <ion-card-content>
+            <!--  -->
+            <ion-grid>
+              <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col col-8 class="misrutas" (click)="onClickedItem()">Ruta 1</ion-col>
+                <ion-col col-2><ion-icon class="iconos-perfil"></ion-icon></ion-col>
+              </ion-row>
+            </ion-grid>
+              <button ion-item (click)="onClickedItem()">
+                c/ La Matanza de Acentejo - Los Cristianos
+              </button>
+              <ion-item ><div #map id="map"></div></ion-item>
+          </ion-card-content>
+        </ion-slide>
+
+        <ion-slide >
+          <ion-card-content>
+            <!--  -->
+            <ion-grid>
+              <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col col-8 class="misrutas" (click)="onClickedItem()">Ruta 2</ion-col>
+                <ion-col col-2></ion-col>
+              </ion-row>
+            </ion-grid>
+              <button ion-item (click)="onClickedItem()">
+                c/ José Ventura - ITER Granadilla de Abona
+              </button>
+              <ion-item ><div #map id="map2"></div></ion-item>
+          </ion-card-content>
+        </ion-slide>
+
+    </ion-slides>
 </ion-card>
 
 
