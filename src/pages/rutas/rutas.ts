@@ -16,15 +16,28 @@ export class RutasPage {
     distancia: '(22 km)'
   }
 
+  // html = '<div class="box">\
+  //               <div class="container-1">\
+  //                 <span class="icon"><i class="fa fa-search"></i></span>\
+  //                 <input type="search" id="search" placeholder="Search..." />\
+  //               </div>\
+  //             </div>';
+
+
   constructor(public navCtrl: NavController) {
 
+  }
+
+  search(elem) {
+  // elem.outerHTML = this.html;
+  // console.log("Holaaaaa");
   }
 
   onClickedItem(ruta){
     console.log(ruta);
     this.navCtrl.push(DetallesRutaPage);
   }
-  
+
   nuevaRuta(){
     this.navCtrl.push(nuevaRutaPage);
   }

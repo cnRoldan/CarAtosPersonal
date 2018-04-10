@@ -27,8 +27,6 @@ export class nuevaRutaPage {
 
    constructor(public navCtrl: NavController) {
 
-
-
    }
 
 

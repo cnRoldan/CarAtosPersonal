@@ -1,10 +1,13 @@
 <ion-header >
-  <ion-navbar color="secondary">
+  <ion-navbar *ngIf="!searching" color="secondary">
     <ion-title>Rutas</ion-title>
-    <ion-buttons end> <a class="fa fa-search icono-blanco" href="https://www.google.es"></a></ion-buttons>
+    <!-- <ion-buttons end> <a class="fa fa-search icono-blanco" (click)="search(this)"></a></ion-buttons> -->
+      <ion-buttons end>
+        <button class="fa fa-search icono-blanco" (click)="searching = !searching"></button>
+      </ion-buttons>
   </ion-navbar>
+  <ion-searchbar (ionCancel)="searching=!searching" (ionClear)="searching=!searching" *ngIf="searching" placeholder="Busca rutas"></ion-searchbar>
 </ion-header>
-
 <ion-content  class="page-about">
   <ion-refresher (ionRefresh)="doRefresh($event)">
   <ion-refresher-content>
