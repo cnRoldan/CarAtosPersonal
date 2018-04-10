@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { nuevaRutaPage } from '../nuevaRuta/nuevaRuta';
+
+
 
 @Component({
   selector: 'page-noti',
@@ -12,6 +15,9 @@ export class NotiPage {
 
   }
 
+  nuevaRuta(){
+    this.navCtrl.push(nuevaRutaPage);
+  }
 
   doRefresh(refresher) {
     console.log('Begin async operation', refresher);

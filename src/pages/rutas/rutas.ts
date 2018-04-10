@@ -8,6 +8,7 @@ import { nuevaRutaPage } from '../nuevaRuta/nuevaRuta';
   templateUrl: 'rutas.html'
 })
 export class RutasPage {
+  static navCtrl: any;
 
   rutaPrueba :Object = {
     nombre:'Pochinki',

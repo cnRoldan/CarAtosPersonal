@@ -11,7 +11,7 @@ import { perfilPage } from '../pages/perfil/perfil';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DetallesRutaPage } from '../pages/detalles-ruta/detalles-ruta'
 import { RutaPerfilPage } from '../pages/ruta-perfil/ruta-perfil';
-import {NotiPage} from '../pages/noti/noti';
+import { NotiPage } from '../pages/noti/noti';
 
 // Geolocation providers
 import { Geolocation } from '@ionic-native/geolocation';

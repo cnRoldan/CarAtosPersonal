@@ -7,8 +7,18 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'nuevaRuta.html'
 })
 export class nuevaRutaPage {
+
+  // dias:string[]=["L","M","X","J","V"];
+
   selected:string="L";
-  dias:string[]=["L","M","X","J","V"];
+
+  diasSemana: { inicial:string, salida:string, llegada:string } [] = [
+    { "inicial": "L", "salida": "", "llegada":""},
+    { "inicial": "M", "salida": "", "llegada":""},
+    { "inicial": "X", "salida": "", "llegada":""},
+    { "inicial": "J", "salida": "", "llegada":""},
+    { "inicial": "V", "salida": "", "llegada":""},
+  ];
 
    constructor(public navCtrl: NavController) {
 

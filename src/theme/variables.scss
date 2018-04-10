@@ -12,6 +12,22 @@ $font-path: "../assets/fonts";
 $app-direction: ltr;
 
 
+//Segment SASS Variables for Android
+$segment-button-md-text-color-activated: black;
+$segment-button-md-border-color-activated: #0066a1;
+
+
+//Segment SASS Variables for iOS
+$segment-button-ios-background-color-activated: #0066a1;
+$segment-button-ios-border-width: 0px;
+
+//Segment SASS Variables for Windows Platform
+$segment-button-wp-padding-start: 45px;
+$segment-button-wp-font-size:	18px;
+$segment-button-wp-text-color-activated: #0066a1;
+
+
+
 @import "ionic.globals";
 
 

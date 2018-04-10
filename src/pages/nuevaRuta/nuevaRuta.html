@@ -12,6 +12,7 @@
         <ion-label color="primary">Origen : </ion-label>
         <ion-input placeholder="De ..."></ion-input>
       </ion-item>
+      <hr>
       <ion-item>
         <ion-label color="primary">Destino : </ion-label>
         <ion-input placeholder="Hasta ..."></ion-input>
@@ -19,23 +20,24 @@
     </ion-list>
 </ion-card>
 
-<div >
-  <ion-segment [(ngModel)]="selected">
-    <ion-segment-button *ngFor="let dia of dias" [value]="dia">{{dia}}</ion-segment-button>
+<div class="segment-div">
+  <ion-segment class="segment" [(ngModel)]="selected">
+    <ion-segment-button class="segment-button" *ngFor="let dia of diasSemana" [value]="dia.inicial">{{dia.inicial}}</ion-segment-button>
   </ion-segment>
 </div>
 
-<div *ngFor="let dia of dias">
-  <ion-list *ngIf="selected==dia" ngSelected="selected" class="slide-in-both-ways">
+<div *ngFor="let dia of diasSemana">
+  <ion-list *ngIf="selected==dia.inicial" ngSelected="selected" class="slide-in-both-ways">
     <ion-card class="border-rad">
       <ion-list>
         <ion-item>
           <ion-label color="primary">Salir casa : </ion-label>
-          <ion-datetime displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
+          <ion-datetime  [(ngModel)]="dia.salida" displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
         </ion-item>
+        <hr>
         <ion-item>
           <ion-label color="primary">Salir trabajo : </ion-label>
-          <ion-datetime displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
+          <ion-datetime [(ngModel)]="dia.llegada" displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
         </ion-item>
       </ion-list>
   </ion-card>
@@ -45,6 +47,6 @@
 
 
 
-        <button color="success" ion-button full round>Crear</button>
+        <button color="success" ion-button block full round center class="button-bottom">Crear</button>
 
 </ion-content>
