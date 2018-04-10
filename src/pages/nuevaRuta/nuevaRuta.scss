@@ -46,3 +46,28 @@
 .scroll {
           height: 100%
     }
+
+
+  @-webkit-keyframes slideInBothWays {
+  0% {
+    -webkit-transform: translate3d(-15%,0,0);
+    opacity: 0;
+  }
+
+  50% {
+    -webkit-transform: translate3d(0%,0,0);
+    opacity: 0.5;
+
+  }
+
+  100% {
+    -webkit-transform: translate3d(0,0,0);
+  }
+}
+
+.slide-in-both-ways {
+   -webkit-animation: slideInBothWays linear;
+  animation: slideInBothWays linear;
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+}
