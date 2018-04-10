@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-// import { Day } from '../../classes/Day';
+ import { Day } from '../../classes/Day';
 
 @Component({
   selector: 'page-nuevaRuta',
@@ -8,19 +8,26 @@ import { NavController } from 'ionic-angular';
 })
 export class nuevaRutaPage {
 
-  // dias:string[]=["L","M","X","J","V"];
 
   selected:string="L";
 
-  diasSemana: { inicial:string, salida:string, llegada:string } [] = [
-    { "inicial": "L", "salida": "", "llegada":""},
-    { "inicial": "M", "salida": "", "llegada":""},
-    { "inicial": "X", "salida": "", "llegada":""},
-    { "inicial": "J", "salida": "", "llegada":""},
-    { "inicial": "V", "salida": "", "llegada":""},
+  lunes = new Day("L");
+  martes = new Day("M");
+  miercoles = new Day("X");
+  jueves = new Day("J");
+  viernes = new Day("V");
+
+  diasSemana:Day[] = [
+    this.lunes,
+    this.martes,
+    this.miercoles,
+    this.jueves,
+    this.viernes
   ];
 
    constructor(public navCtrl: NavController) {
+
+
 
    }
 
