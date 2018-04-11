@@ -52,7 +52,7 @@ $segment-button-wp-text-color-activated: #0066a1;
 $colors: (
   primary:    #19414D,
   secondary:  #0066A1,
-  danger:     #E1AC4F,
+  danger:     hsl(0, 100%, 50%),
   light:      #1ea41b,
   dark:       #5d5d5d,
   success:    rgb(1, 152, 58),
