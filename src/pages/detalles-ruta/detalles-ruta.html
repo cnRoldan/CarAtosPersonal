@@ -1,32 +1,37 @@
-<ion-header >
+<ion-header>
   <ion-navbar color="secondary">
     <ion-title>Detalle de ruta</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content  class="page-detalles-ruta">
+<ion-content class="page-detalles-ruta">
 
 
-<ion-card>
+  <ion-card>
     <ion-row padding>
-    <div class="usuario" item-left>
-      <img src="https://images.vexels.com/media/users/3/140750/isolated/preview/c9b1b66ee3fc60f9bb0aa9a5bee63a9f-perfil-masculino-avatar-2-by-vexels.png" class="image-perfil" >
-      <small  class="nombre-usuario">Usuario98</small>
-    </div>
+      <div class="usuario" item-left>
+        <img src="https://images.vexels.com/media/users/3/140750/isolated/preview/c9b1b66ee3fc60f9bb0aa9a5bee63a9f-perfil-masculino-avatar-2-by-vexels.png"
+          class="image-perfil">
+        <small class="nombre-usuario">Usuario98</small>
+      </div>
 
-    <ion-list >
-      <ion-label  item-right ><strong>De: </strong> Adeje</ion-label>
-      <ion-label  item-right ><strong>Hasta: </strong> Punta Anaga alta</ion-label>
-      <ion-label  item-right ><strong>Plazas: </strong>
-      <i class="fa fa-user fa-lg"></i>
-      <i class="fa fa-user fa-lg"></i>
-      <i class="fa fa-user fa-lg"></i>
-      <i class="fa fa-user fa-lg"></i>
-      <i class="fa fa-user fa-lg sitio-libre"></i></ion-label>
-    </ion-list>
+      <ion-list>
+        <ion-label item-right>
+          <strong>De: </strong> Adeje</ion-label>
+        <ion-label item-right>
+          <strong>Hasta: </strong> Punta Anaga alta</ion-label>
+        <ion-label item-right>
+          <strong>Plazas: </strong>
+          <i class="fa fa-user fa-lg"></i>
+          <i class="fa fa-user fa-lg"></i>
+          <i class="fa fa-user fa-lg"></i>
+          <i class="fa fa-user fa-lg"></i>
+          <i class="fa fa-user fa-lg sitio-libre"></i>
+        </ion-label>
+      </ion-list>
 
-  </ion-row>
-</ion-card>
+    </ion-row>
+  </ion-card>
 
   <div class="segment-div">
     <ion-segment class="segment" [(ngModel)]="selected">
@@ -40,7 +45,7 @@
         <ion-list>
           <ion-item>
             <ion-label color="primary">Salida</ion-label>
-            <ion-datetime  [(ngModel)]="dia.salida" displayFormat="HH:mm" placeholder="Mostrar hora"></ion-datetime>
+            <ion-datetime [(ngModel)]="dia.salida" displayFormat="HH:mm" placeholder="Mostrar hora"></ion-datetime>
           </ion-item>
           <hr>
           <ion-item>
@@ -48,18 +53,17 @@
             <ion-datetime [(ngModel)]="dia.llegada" displayFormat="HH:mm" placeholder="Mostrar hora"></ion-datetime>
           </ion-item>
         </ion-list>
-    </ion-card>
+      </ion-card>
     </ion-list>
   </div>
-      <hr>
-        <h4  padding-left>Descripción:</h4 >
-        <p padding-left>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-        ut labore et dolore magna aliqua.</p>
+  <hr>
+  <h4 padding-left>Descripción:</h4>
+  <p padding-left>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-        <ion-item>
-          <ion-label>Precio/Día : 1€ </ion-label>
-        </ion-item>
-        <ion-item>
-          <button color="success" ion-button full round padding>Solicitar</button>
-        </ion-item>
+  <ion-item>
+    <ion-label>Precio/Día : 1€ </ion-label>
+  </ion-item>
+  <ion-item>
+    <button color="success" ion-button full round padding>Solicitar</button>
+  </ion-item>
 </ion-content>

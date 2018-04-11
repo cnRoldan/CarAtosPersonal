@@ -5,75 +5,69 @@
 </ion-header>
 
 <ion-content class="page-perfil">
-  <ion-card class="border-card">
-    <ion-item>
+  <ion-card class="border-card perfil-card">
+    <ion-item class="perfil-card">
       <img src="https://images.vexels.com/media/users/3/140750/isolated/preview/c9b1b66ee3fc60f9bb0aa9a5bee63a9f-perfil-masculino-avatar-2-by-vexels.png" class="image-perfil" item-left>
-      <h1>Juan José Portelo</h1>
+      <h2>Juan José Portelo</h2>
       <hr>
-      <h2>juanportesdfsdfdsffdsflo@gmail.com</h2>
+      <small>juanportesdfsdfdsffdsflo@gmail.com</small>
       <hr>
       <a href="https://api.whatsapp.com/send?phone=34671202477&text=">
                          +34 654 542 254<i class="fa fa-whatsapp fa-2x border-zero-whats" ></i>
       </a>
 
     </ion-item>
-    <!-- <ion-card-content class="border-card">
-      <ion-item>
-        <img src="https://images.vexels.com/media/users/3/140750/isolated/preview/c9b1b66ee3fc60f9bb0aa9a5bee63a9f-perfil-masculino-avatar-2-by-vexels.png" class="image-perfil" item-left>
-        <p class="perfil-header">
-          Juan Jose Portelo
-        </p>
-        <hr>
-        <p>
-          mattia95@gmail.com
-        </p>
-        <hr>
-        <p>
-          672-343-233
-        </p>
-        <a href="https://api.whatsapp.com/send?phone=34671202477&text=¿Pive%20tu%20me%20acercas%20al%20curro?">
-        <i class="fa fa-whatsapp fa-2x border-zero-whats" ></i>
-      </a>
-        <hr>
-      </ion-item>
-    </ion-card-content> -->
   </ion-card>
-  <ion-card class="border-card">
 
+
+
+  
+  <ion-card class="border-card">
+    <ion-navbar color="secondary" class="navbar-perfil">
+      <ion-label text-center>Mis rutas</ion-label>
+    </ion-navbar>
 
       <ion-slides pager>
-
-        <ion-slide>
-          <ion-card-content>
-            <!--  -->
-            <ion-grid>
-              <ion-row>
-                <ion-col col-2></ion-col>
-                <ion-col col-8 class="misrutas" (click)="onClickedItem()">Ruta 1</ion-col>
-                <ion-col col-2><ion-icon class="iconos-perfil"></ion-icon></ion-col>
-              </ion-row>
-            </ion-grid>
-              <button ion-item (click)="onClickedItem()">
-                c/ La Matanza de Acentejo - Los Cristianos
-              </button>
-              <ion-item ><div #map id="map"></div></ion-item>
-          </ion-card-content>
-        </ion-slide>
-
         <ion-slide >
           <ion-card-content>
             <!--  -->
-            <ion-grid>
-              <ion-row>
-                <ion-col col-2></ion-col>
-                <ion-col col-8 class="misrutas" (click)="onClickedItem()">Ruta 2</ion-col>
-                <ion-col col-2></ion-col>
-              </ion-row>
-            </ion-grid>
-              <button ion-item (click)="onClickedItem()">
-                c/ José Ventura - ITER Granadilla de Abona
-              </button>
-              <ion-item ><div #map id="map2"></div></ion-item>
+              <button ion-item (click)="onClickedItem()">c/ La Matanza de Acentejo - Los Cristianos</button>
+              <ion-item ><div #map id="map"></div></ion-item>
+          </ion-card-content>
+        </ion-slide>
+        <ion-slide >
+          <ion-card-content>
+            <!--  -->
+              <button ion-item (click)="onClickedItem()">c/ La Matanza de Acentejo - Los Cristianos</button>
+              <ion-item ><div #map id="map"></div></ion-item>
+          </ion-card-content>
+        </ion-slide>
+        <ion-slide >
+          <ion-card-content>
+            <!--  -->
+              <button ion-item (click)="onClickedItem()">c/ La Matanza de Acentejo - Los Cristianos</button>
+              <ion-item ><div #map id="map"></div></ion-item>
+          </ion-card-content>
+        </ion-slide>
+        <ion-slide >
+          <ion-card-content>
+            <!--  -->
+              <button ion-item (click)="onClickedItem()">c/ La Matanza de Acentejo - Los Cristianos</button>
+              <ion-item ><div #map id="map"></div></ion-item>
+          </ion-card-content>
+        </ion-slide>
+        <ion-slide >
+          <ion-card-content>
+            <!--  -->
+              <button ion-item (click)="onClickedItem()">c/ La Matanza de Acentejo - Los Cristianos</button>
+              <ion-item ><div #map id="map"></div></ion-item>
+          </ion-card-content>
+        </ion-slide>
+        <ion-slide >
+          <ion-card-content>
+            <!--  -->
+              <button ion-item (click)="onClickedItem()">c/ La Matanza de Acentejo - Los Cristianos</button>
+              <ion-item ><div #map id="map"></div></ion-item>
           </ion-card-content>
         </ion-slide>
 

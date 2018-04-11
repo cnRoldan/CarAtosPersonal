@@ -13,6 +13,10 @@ import { DetallesRutaPage } from '../pages/detalles-ruta/detalles-ruta'
 import { RutaPerfilPage } from '../pages/ruta-perfil/ruta-perfil';
 import { NotiPage } from '../pages/noti/noti';
 
+// Ionic Rating
+import { Ionic2RatingModule } from "ionic2-rating";
+
+
 // Geolocation providers
 import { Geolocation } from '@ionic-native/geolocation';
 
@@ -41,6 +45,7 @@ import { HttpModule } from '@angular/http';
     BrowserModule,
     HttpModule,
     HttpClientModule,
+    Ionic2RatingModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

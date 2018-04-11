@@ -1,4 +1,4 @@
-<ion-header >
+<ion-header>
   <ion-navbar color="secondary">
     <ion-title>Crear Rutas</ion-title>
   </ion-navbar>
@@ -13,7 +13,7 @@
           <img src="http://www.todoriesgo.com.ar/wp-content/uploads/2017/01/ruta-2-3-large.jpg" class="image-perfil" item-left>
         </ion-avatar>
         <ion-label color="primary" stacked>Nombre</ion-label>
-        <ion-input placeholder="De la ruta o grupo" ></ion-input>
+        <ion-input placeholder="De la ruta o grupo"></ion-input>
       </ion-item>
       <hr>
       <ion-item>
@@ -28,36 +28,40 @@
           <ion-option value="AGA">AtoS Granadilla de Abona</ion-option>
         </ion-select>
       </ion-item>
+      <hr>
+      <ion-item>
+        <ion-label color="primary" fixed>Pasajeros</ion-label>
+      </ion-item>
     </ion-list>
-</ion-card>
-
-<div class="segment-div">
-  <ion-segment class="segment" [(ngModel)]="selected">
-    <ion-segment-button class="segment-button" *ngFor="let dia of diasSemana" [value]="dia.inicial">{{dia.inicial}}</ion-segment-button>
-  </ion-segment>
-</div>
-
-<div *ngFor="let dia of diasSemana">
-  <ion-list *ngIf="selected==dia.inicial" ngSelected="selected" class="slide-in-both-ways">
-    <ion-card class="border-rad">
-      <ion-list>
-        <ion-item>
-          <ion-label color="primary">Salida</ion-label>
-          <ion-datetime  [(ngModel)]="dia.salida" displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
-        </ion-item>
-        <hr>
-        <ion-item>
-          <ion-label color="primary">Llegada</ion-label>
-          <ion-datetime [(ngModel)]="dia.llegada" displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
-        </ion-item>
-      </ion-list>
   </ion-card>
-  </ion-list>
-</div>
+
+  <div class="segment-div">
+    <ion-segment class="segment" [(ngModel)]="selected">
+      <ion-segment-button class="segment-button" *ngFor="let dia of diasSemana" [value]="dia.inicial">{{dia.inicial}}</ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div *ngFor="let dia of diasSemana">
+    <ion-list *ngIf="selected==dia.inicial" ngSelected="selected" class="slide-in-both-ways">
+      <ion-card class="border-rad">
+        <ion-list>
+          <ion-item>
+            <ion-label color="primary">Salida</ion-label>
+            <ion-datetime [(ngModel)]="dia.salida" displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
+          </ion-item>
+          <hr>
+          <ion-item>
+            <ion-label color="primary">Llegada</ion-label>
+            <ion-datetime [(ngModel)]="dia.llegada" displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-list>
+  </div>
 
 
 
 
-        <button color="success" ion-button block full round center class="button-bottom">Crear</button>
+  <button color="success" ion-button block full round center class="button-bottom">Crear</button>
 
 </ion-content>

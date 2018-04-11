@@ -21,6 +21,7 @@
 .border-card{
   border-radius: 12px;
 }
+
 .div-perfil{
   height: 40px;
 }
@@ -32,18 +33,32 @@
       }
 
 .misrutas{
-  background: #0066a1;
-  color:white;
-  border-radius: 30px !important;
+  color:black;
 }
+
+
 .border-zero-whats{
   margin-left: 20px;
   color: green;
-      // color: rgb(41, 226, 37);
-      //   position:absolute;
-      //    bottom:20px;
-      //    right:5px;
-      //    z-index:300;
-      //    min-width:0;
-      //    width:8%;
+  // color: rgb(41, 226, 37);
+  //   position:absolute;
+  //    bottom:20px;
+  //    right:5px;
+  //    z-index:300;
+  //    min-width:0;
+  //    width:8%;
+}
+
+.tituloPerfil{
+  font-size: 10px;
+  color:brown;
+}
+
+
+.fondo-azul{
+  background-color: #0066a1;  
+}
+
+.navbar-perfil {
+  color:white;
 }
