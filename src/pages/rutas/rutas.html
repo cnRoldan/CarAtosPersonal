@@ -6,7 +6,7 @@
         <button class="fa fa-search icono-blanco" (click)="searching = !searching"></button>
       </ion-buttons>
   </ion-navbar>
-  <ion-searchbar [showCancelButton]="true" (ionCancel)="searching=!searching" (ionClear)="searching=!searching" *ngIf="searching" placeholder="Busca rutas"></ion-searchbar>
+  <ion-searchbar [showCancelButton]="true" *ngIf="searching" placeholder="Busca rutas"></ion-searchbar>
 </ion-header>
 <ion-content  class="page-about">
   <ion-refresher (ionRefresh)="doRefresh($event)">
