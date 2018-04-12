@@ -3,10 +3,10 @@
     <ion-title>Rutas</ion-title>
     <!-- <ion-buttons end> <a class="fa fa-search icono-blanco" (click)="search(this)"></a></ion-buttons> -->
     <ion-buttons end>
-      <button class="fa fa-search icono-blanco" (click)="searching = !searching"></button>
+      <button class="fa fa-search icono-blanco" (click)="searching =!searching"></button>
     </ion-buttons>
   </ion-navbar>
-  <ion-searchbar [showCancelButton]="true" *ngIf="searching" placeholder="Busca rutas"></ion-searchbar>
+  <ion-searchbar [showCancelButton]="true" (ionCancel)="searching=!searching" *ngIf="searching" placeholder="Busca rutas"></ion-searchbar>
 </ion-header>
 <ion-content class="page-about">
   <ion-refresher (ionRefresh)="doRefresh($event)">
@@ -27,7 +27,7 @@
       <hr>
       <p>{{ rutaPrueba.recorrido }} {{ rutaPrueba.distancia }}</p>
       <ion-avatar item-start>
-          <img src="https://www.autobild.es/sites/autobild.es/public/styles/768x432/public/dc/fotos/Ferrari-488_Spider_2016_C01.jpg?itok=iw1GiV1t">
+          <img src="https://img.milanuncios.com/fg/1914/74/191474936_1.jpg?">
       </ion-avatar>
       <i class="fa fa-user fa-lg"></i>
       <i class="fa fa-user fa-lg"></i>
@@ -77,7 +77,7 @@
       <hr>
       <p>Santiago Alto - Puntas del pozo (12 km)</p>
       <ion-avatar item-start>
-        <img src="https://www.autobild.es/sites/autobild.es/public/styles/768x432/public/dc/fotos/Ferrari-488_Spider_2016_C01.jpg?itok=iw1GiV1t">
+        <img src="https://ksassets.timeincuk.net/wp/uploads/sites/54/2017/11/29-1024x576.jpeg">
       </ion-avatar>
       <i class="fa fa-user fa-lg"></i>
       <i class="fa fa-user fa-lg"></i>
