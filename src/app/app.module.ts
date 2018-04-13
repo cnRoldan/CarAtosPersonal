@@ -20,6 +20,7 @@ import { Ionic2RatingModule } from "ionic2-rating";
 //Firebase
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+
 const firebaseConfig = {
   apiKey: "AIzaSyD8OlEav-M8al9U9eogTYhiSYLzUI1reIA",
   authDomain: "caratos-1523276247930.firebaseapp.com",
