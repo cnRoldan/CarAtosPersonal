@@ -6,21 +6,23 @@
 
 <ion-content class="page-perfil">
   <ion-card class="border-card perfil-card">
-      <ion-item class="perfil-card">
-        <img src="https://pbs.twimg.com/profile_images/426033231977136128/31XCyLMF.jpeg"
-          class="image-perfil" item-left>
-        <h1>Juan José Portelo</h1>
-        <hr>
-        <label>juanjojj@gmail.com <i class="fa fa-envelope-o"></i></label>
-        <hr>
-        <a href="https://api.whatsapp.com/send?phone=34671202477&text=">
-          <label class="chip">+34 654 542 254 <i class="fa fa-whatsapp fa-1x fa-green"></i></label>
-        </a>
-        </ion-item>
+    <ion-item class="perfil-card">
+      <img src="https://pbs.twimg.com/profile_images/426033231977136128/31XCyLMF.jpeg" class="image-perfil" item-left>
+      <label class="nombrePerfil">
+        <b>José Portelo</b>
+      </label>
+      <hr>
+      <label class="correoLabel">juanjojj@gmail.com
+        <i class="fa fa-envelope-o"></i>
+      </label>
+      <hr>
+      <a href="https://api.whatsapp.com/send?phone=34671202477&text=">
+        <label class="chip">+34 654 542 254
+          <i class="fa fa-whatsapp fa-1x fa-green"></i>
+        </label>
+      </a>
+    </ion-item>
   </ion-card>
-
-
-
 
   <ion-card class="border-card">
     <ion-navbar color="secondary" class="navbar-perfil">
@@ -30,53 +32,17 @@
     <ion-slides pager>
       <ion-slide>
         <ion-card-content>
-          <!--  -->
-          <button ion-item (click)="onClickedItem()">c/ La Matanza de Acentejo - Los Cristianos</button>
-          <ion-item>
-            <div #map id="map"></div>
-          </ion-item>
+          <ion-list>
+            <button ion-item text-center (click)="onClickedItem()">Alisos (c/ La Matanza de Acentejo - AtoS SC)</button>
+          </ion-list>
+          <div #map id="map"></div>
         </ion-card-content>
       </ion-slide>
+
       <ion-slide>
         <ion-card-content>
           <!--  -->
-          <button ion-item (click)="onClickedItem()">c/ La Matanza de Acentejo - Los Cristianos</button>
-          <ion-item>
-            <div #map id="map"></div>
-          </ion-item>
-        </ion-card-content>
-      </ion-slide>
-      <ion-slide>
-        <ion-card-content>
-          <!--  -->
-          <button ion-item (click)="onClickedItem()">c/ La Matanza de Acentejo - Los Cristianos</button>
-          <ion-item>
-            <div #map id="map"></div>
-          </ion-item>
-        </ion-card-content>
-      </ion-slide>
-      <ion-slide>
-        <ion-card-content>
-          <!--  -->
-          <button ion-item (click)="onClickedItem()">c/ La Matanza de Acentejo - Los Cristianos</button>
-          <ion-item>
-            <div #map id="map"></div>
-          </ion-item>
-        </ion-card-content>
-      </ion-slide>
-      <ion-slide>
-        <ion-card-content>
-          <!--  -->
-          <button ion-item (click)="onClickedItem()">c/ La Matanza de Acentejo - Los Cristianos</button>
-          <ion-item>
-            <div #map id="map"></div>
-          </ion-item>
-        </ion-card-content>
-      </ion-slide>
-      <ion-slide>
-        <ion-card-content>
-          <!--  -->
-          <button ion-item (click)="onClickedItem()">c/ La Matanza de Acentejo - Los Cristianos</button>
+          <button ion-item (click)="onClickedItem()"> Pochinki (Adeje - Punta Anaga Alta)</button>
           <ion-item>
             <div #map id="map"></div>
           </ion-item>

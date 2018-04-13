@@ -1,66 +1,130 @@
-<ion-header >
+<ion-header>
   <ion-navbar color="secondary">
     <ion-title>Editar Ruta</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content  class="page-about">
-  <h1 class="centrado">Alisos</h1>
-  <div class="">
-    
-  </div>
-<ion-card>
+<ion-content class="page-about">
 
-  <ion-card-content>
-    <ion-grid>
-    <ion-row>
-      <ion-col>
-        Desde:
-      </ion-col>
-      <ion-col>
-        Playa de la arena
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        Hasta:
-      </ion-col>
-      <ion-col>
-        Punta Anaga Baja
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        Hora:
-      </ion-col>
-      <ion-col>
-        8:00 - 16:30
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-  </ion-card-content>
-</ion-card>
-<div class="centrado">
-  <i class="fa fa-user fa-3x iconos-ruta-perfil"></i>
-  <i class="fa fa-user fa-3x iconos-ruta-perfil"></i>
-  <i class="fa fa-user fa-3x iconos-ruta-perfil"></i>
-  <i class="fa fa-user fa-3x iconos-ruta-perfil"></i>
-  <i class="fa fa-user fa-3x sitio-libre iconos-ruta-perfil"></i>
-</div>
-<ion-card>
-  <ion-card-header class="item-divider">
-    Integrantes
-  </ion-card-header>
-  <ion-card-content>
-      Integrante 1
-  </ion-card-content>
-</ion-card>
-<ion-card>
-  <ion-card-header class="item-divider">
-    Solicitudes
-  </ion-card-header>
-  <ion-card-content>
-      Solicitud 1
-  </ion-card-content>
-</ion-card>
+
+  <ion-card class="border-rad">
+    <ion-card-header class="item-divider bgheader tituloruta">
+      <b>Alisos</b>
+    </ion-card-header>
+    <ion-list inset>
+      <button ion-item>
+        Lugar de salida y destino
+      </button>
+      <button ion-item>
+        Horario
+      </button>
+      <button ion-item>
+        Descripción
+      </button>
+    </ion-list>
+    <!-- <ion-grid>
+        <ion-row align-items-center justify-content-center>
+          <h2>Desde</h2>
+        </ion-row>
+        <ion-row align-items-center justify-content-center>
+          <small>Chipude</small>
+        </ion-row>
+        <hr>
+        <ion-row align-items-center justify-content-center>
+          <h2>Hasta</h2>
+        </ion-row>
+        <ion-row align-items-center justify-content-center>
+          <small> AtoS Santa Cruz de Tenerife</small>
+        </ion-row>
+        <hr>
+        <ion-row align-items-center justify-content-center>
+          <h2>Horario</h2>
+        </ion-row>
+        <ion-row align-items-center justify-content-center>
+          <small>08:30 - 17:30</small>
+        </ion-row>
+        <hr>
+        <ion-row align-items-center justify-content-center>
+          <h2>Ocupantes</h2>
+        </ion-row>
+        <ion-row align-items-center justify-content-center>
+          <div class="centrado">
+            <i class="fa fa-user fa-1x iconos-ruta-perfil"></i>
+            <i class="fa fa-user fa-1x iconos-ruta-perfil"></i>
+            <i class="fa fa-user fa-1x iconos-ruta-perfil"></i>
+            <i class="fa fa-user fa-1x iconos-ruta-perfil"></i>
+            <i class="fa fa-user fa-1x sitio-libre iconos-ruta-perfil"></i>
+          </div>
+
+        </ion-row>
+      </ion-grid> -->
+  </ion-card>
+
+
+
+  <ion-card class="border-rad">
+    <ion-card-header class="item-divider bgheader">
+      Integrantes
+    </ion-card-header>
+    <ion-list>
+      <ion-item-sliding *ngIf=!show2>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png">
+          </ion-avatar>
+          <h2>Claudio</h2>
+          <p>Oh yeah!</p>
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="danger" (click)="show2 = !show2">
+            <ion-icon name="exit"></ion-icon>
+            Expulsar
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+      <ion-item-sliding>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_960_720.png">
+          </ion-avatar>
+          <h2>Ivanaso</h2>
+          <p> Hey there! Im new using WhatsApp</p>
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="danger" (click)="show2 = !show2">
+            <ion-icon name="exit"></ion-icon>
+            Expulsar
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+
+    <ion-card-header class="item-divider bgheader">
+      Solicitudes
+    </ion-card-header>
+    <ion-list>
+      <ion-item-sliding *ngIf="!show3">
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="https://pbs.twimg.com/profile_images/426033231977136128/31XCyLMF.jpeg">
+          </ion-avatar>
+          <h2>
+            <strong>Claudio Roldán</strong>
+          </h2>
+          <p>¡Claudio quiere entrar a la ruta!</p>
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="dark" (click)="show3 = !show3">
+            <ion-icon name="trash"></ion-icon>
+            Borrar
+          </button>
+          <button ion-button color="success" (click)="show3 = !show3">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            Aceptar
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </ion-card>
+
 </ion-content>
