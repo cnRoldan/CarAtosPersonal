@@ -23,7 +23,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 const firebaseConfig = {
   apiKey: "AIzaSyD8OlEav-M8al9U9eogTYhiSYLzUI1reIA",
   authDomain: "caratos-1523276247930.firebaseapp.com",
-  databaseURL: "https://caratos-1523276247930.firebaseio.com <https://caratos-1523276247930.firebaseio.com/> ",
+  databaseURL: "https://caratos-1523276247930.firebaseio.com",
   projectId: "caratos-1523276247930",
   storageBucket: "caratos-1523276247930.appspot.com",
   messagingSenderId: "303200331113"
