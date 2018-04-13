@@ -31,6 +31,7 @@ const firebaseConfig = {
 };
 
 
+  
 
 // Geolocation providers
 import { Geolocation } from '@ionic-native/geolocation';
