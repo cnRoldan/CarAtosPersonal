@@ -1,9 +1,9 @@
 export class Day {
-  inicial:string;
-  hora:string;
-  salida:string;
+  horaLl:string;
+  horaS:string;
+  nombre:string;
 
-  constructor (inicial:string) {
-    this.inicial=inicial;
+  constructor (nombre:string) {
+    this.nombre=nombre;
   }
 }

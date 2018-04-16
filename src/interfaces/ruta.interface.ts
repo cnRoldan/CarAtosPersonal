@@ -7,7 +7,7 @@ export interface Ruta {
     ocupantes: number;
     owner: Usuario;
     plazas: number;
-    salida: string
+    salida: string;
+    descripcion:string;
     semana: Dia[];
-    key$?: string;
 }

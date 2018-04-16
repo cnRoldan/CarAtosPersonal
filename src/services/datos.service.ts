@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
-import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class DataService {
@@ -15,6 +14,6 @@ export class DataService {
     return this.rutas.valueChanges();
   }
   setRutas(item:any){
-    this.rutas.add(item)
+    this.rutas.add(item);
   }
 }
