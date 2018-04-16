@@ -33,7 +33,7 @@
     </ion-row>
   </ion-card>
 
-  <div class="segment-div">
+  <div class="segment-div" margin="2">
     <ion-segment class="segment" [(ngModel)]="selected">
       <ion-segment-button class="segment-button" *ngFor="let dia of diasSemana" [value]="dia.inicial">{{dia.inicial}}</ion-segment-button>
     </ion-segment>
@@ -45,12 +45,12 @@
         <ion-list>
           <ion-item>
             <ion-label color="primary">Salida</ion-label>
-            <ion-datetime [(ngModel)]="dia.salida" displayFormat="HH:mm" placeholder="Mostrar hora"></ion-datetime>
+            <ion-datetime [(ngModel)]="dia.salida" displayFormat="HH:mm"></ion-datetime>
           </ion-item>
           <hr>
           <ion-item>
             <ion-label color="primary">Llegada</ion-label>
-            <ion-datetime [(ngModel)]="dia.llegada" displayFormat="HH:mm" placeholder="Mostrar hora"></ion-datetime>
+            <ion-datetime [(ngModel)]="dia.llegada" displayFormat="HH:mm"></ion-datetime>
           </ion-item>
         </ion-list>
       </ion-card>

@@ -1,5 +1,6 @@
 import { Usuario } from "./usuario.interface";
 import { Dia } from "./dia.interface";
+
 export interface Ruta {
 
     destino: string;
