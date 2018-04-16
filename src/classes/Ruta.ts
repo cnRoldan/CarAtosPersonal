@@ -1,5 +1,5 @@
 import { Day} from './Day';
-import { Usuario } from './Usuario';
+//import { Usuario } from './Usuario';
 
 export class Ruta {
   destino: string;
