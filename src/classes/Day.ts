@@ -1,23 +1,22 @@
 export class Day {
+  private horaLl:string;
+  private horaS:string;
+  private nombre:string;
 
-  private inicial:string;
-  private hora:string;
-  private salida:string;
-
-  constructor (inicial:string) {
-    this.inicial=inicial;
+  constructor (nombre:string) {
+    this.nombre=nombre;
   }
 
-  get _hora():string {
-    return this.hora;
+  get _horaLl():string {
+    return this.horaLl;
   }
 
-  set _hora(value:string){
-    this.hora = value;
+  set _horaLl(value:string){
+    this.horaLl = value;
   }
 
-  set _salida(value:string){
-    this.salida = value;
+  set _salidaS(value:string){
+    this.horaS = value;
   }
 
 }
