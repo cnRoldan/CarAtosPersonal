@@ -39,6 +39,8 @@ const firebaseConfig = {
 
 // Geolocation providers
 import { Geolocation } from '@ionic-native/geolocation';
+import { AgmCoreModule } from "@agm/core";
+import {ReactiveFormsModule} from '@angular/forms';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -69,7 +71,12 @@ import { HttpModule } from '@angular/http';
     AngularFireModule.initializeApp(firebaseConfig,'carATOS'),
     AngularFireDatabaseModule,
     AngularFirestoreModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyDR_F1xIvMtwJCot4QM3cHHMbTdEghaxzs",
+      libraries:["places"]
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [

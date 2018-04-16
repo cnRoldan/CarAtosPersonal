@@ -32,8 +32,8 @@ export class DetallesRutaPage implements OnInit{
     this.lunes._horaLl = "21:00";
     this.martes._horaLl = "21:00";
     this.miercoles._horaLl = "22:00";
-    this.jueves._horaLl="00:00";
-    this.viernes._horaLl="13:00";
+    this.jueves._horaLl="22:00";
+    this.viernes._horaLl="15:00";
   }
 
   ngOnInit(){

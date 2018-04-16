@@ -2,7 +2,9 @@
   <ion-navbar color="secondary">
     <ion-title>Crear Rutas</ion-title>
   </ion-navbar>
+
 </ion-header>
+
 
 <ion-content padding class="page-nuevaRuta animated fadeIn fast">
 
@@ -18,12 +20,17 @@
       <hr>
       <ion-item>
         <ion-label color="primary" fixed>Origen</ion-label>
-        <ion-input [(ngModel)]="ruta.salida"></ion-input>
       </ion-item>
+      <!-- Telita -->
+      <div class="form-group">
+        <input placeholder="Buscar localizacion" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control"
+          #search [formControl]="searchControl" [(ngModel)]="ruta.salida">
+      </div>
+      <!--  -->
       <hr>
       <ion-item>
         <ion-label color="primary" fixed>Destino</ion-label>
-        <ion-select [(ngModel)]="ruta.destino" >
+        <ion-select [(ngModel)]="ruta.destino">
           <ion-option value="S/C">AtoS Consulting Canarias S/C</ion-option>
           <ion-option value="AGA">AtoS Granadilla de Abona</ion-option>
         </ion-select>
@@ -33,7 +40,7 @@
         <ion-label color="primary" fixed>Plazas</ion-label>
         <ion-input type="number" min="1" max="4" value="1" name="plazas" [(ngModel)]="ruta.plazas"></ion-input>
       </ion-item>
-      <ion-item >
+      <ion-item>
         <ion-label color="primary" floating>Descripción</ion-label>
         <ion-textarea color="primary" rows="4" maxLength="300" [(ngModel)]="ruta.descripcion"></ion-textarea>
       </ion-item>
@@ -49,15 +56,15 @@
   <div *ngFor="let dia of diasSemana">
     <ion-list *ngIf="selected==dia.nombre" ngSelected="selected" class="slide-in-both-ways">
       <ion-card class="border-rad">
-          <ion-item>
-            <ion-label color="primary">Salida</ion-label>
-            <ion-datetime [(ngModel)]="dia.horaS" displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
-          </ion-item>
-          <hr>
-          <ion-item>
-            <ion-label color="primary">Llegada</ion-label>
-            <ion-datetime [(ngModel)]="dia.horaLl" displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
-          </ion-item>
+        <ion-item>
+          <ion-label color="primary">Salida</ion-label>
+          <ion-datetime [(ngModel)]="dia.horaS" displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
+        </ion-item>
+        <hr>
+        <ion-item>
+          <ion-label color="primary">Llegada</ion-label>
+          <ion-datetime [(ngModel)]="dia.horaLl" displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
+        </ion-item>
       </ion-card>
     </ion-list>
   </div>
