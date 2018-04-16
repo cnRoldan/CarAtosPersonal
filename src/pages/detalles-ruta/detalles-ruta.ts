@@ -25,7 +25,7 @@ export class DetallesRutaPage {
   miercoles = new Day("X");
   jueves = new Day("J");
   viernes = new Day("V");
-
+  
   diasSemana:Day[] = [
     this.lunes,
     this.martes,
@@ -35,6 +35,11 @@ export class DetallesRutaPage {
   ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public bd:DataService) {
+    this.lunes._horaLl = "21:00";
+    this.martes._horaLl = "21:00";
+    this.miercoles._horaLl = "22:00";
+    this.jueves._horaLl="00:00";
+    this.viernes._horaLl="13:00";
     this.observable = this.bd.getRuta("B4UoQxGQ4UbHSTQOZXBU")
     this.observable.map(res => {
       this.items = res;
