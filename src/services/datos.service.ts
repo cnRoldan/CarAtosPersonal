@@ -11,6 +11,9 @@ export class DataService {
     this.rutas = db.collection('/Rutas');
   }
   
+  getRuta(id:string){
+    return this.rutas.doc(id).valueChanges();
+  }
   getRutas(){
     return this.rutas.valueChanges();
   }
