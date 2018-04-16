@@ -35,12 +35,12 @@
 
   <div class="segment-div" margin="2">
     <ion-segment class="segment" [(ngModel)]="selected">
-      <ion-segment-button class="segment-button" *ngFor="let dia of diasSemana" [value]="dia.inicial">{{dia.inicial}}</ion-segment-button>
+      <ion-segment-button class="segment-button" *ngFor="let dia of diasSemana" [value]="dia.nombre">{{dia.nombre}}</ion-segment-button>
     </ion-segment>
   </div>
 
   <div *ngFor="let dia of diasSemana">
-    <ion-list *ngIf="selected==dia.inicial" ngSelected="selected" class="slide-in-both-ways">
+    <ion-list *ngIf="selected==dia.nombre" ngSelected="selected" class="slide-in-both-ways">
       <ion-card class="border-rad">
         <ion-list>
           <ion-item>
