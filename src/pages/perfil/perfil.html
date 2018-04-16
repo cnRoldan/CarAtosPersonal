@@ -4,21 +4,21 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="page-perfil animated fadeIn fast">
+<ion-content class="page-perfil animated fadeIn fast" >
   <ion-card class="border-card perfil-card">
-    <ion-item class="perfil-card">
+    <ion-item class="perfil-card" *ngIf="perfil">
       <img src="https://pbs.twimg.com/profile_images/426033231977136128/31XCyLMF.jpeg" class="image-perfil" item-left>
       <label class="nombrePerfil">
-        <b>José Portelo</b>
+        <b>{{perfil.nombre}}</b>
       </label>
       <hr>
       <a href="https://api.whatsapp.com/send?phone=34671202477&text=">
-        <label class="chip">Contactar
+        <label class="chip">{{perfil.movil}}
           <i class="fa fa-whatsapp fa-1x fa-green"></i>
         </label>
       </a>
       <hr>
-      <label class="correoLabel"><small>juanjojj23@gmail.com</small>
+      <label class="correoLabel"><small>{{perfil.correo}}</small>
         <i class="fa fa-envelope-o"></i>
       </label>
     </ion-item>

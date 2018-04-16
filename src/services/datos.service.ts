@@ -4,10 +4,12 @@ import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/fires
 @Injectable()
 export class DataService {
   private rutas:AngularFirestoreCollection<any>;
+  private users:AngularFirestoreCollection<any>;  
   constructor(
     public db:AngularFirestore
   ) {
     this.rutas = db.collection('/Rutas');
+    this.users = db.collection('/Usuarios');
   }
   
   getRuta(id:string){
@@ -15,6 +17,15 @@ export class DataService {
   }
   getRutas(){
     return this.rutas.valueChanges();
+  }
+  getUser(id:string){
+    return this.users.doc(id).valueChanges();
+  }
+  getUsers(){
+    return this.users.valueChanges();
+  }
+  setUser(item:any){
+    this.users.add(item);
   }
   setRutas(item:any){
     this.rutas.add(item);
