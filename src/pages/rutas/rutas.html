@@ -8,7 +8,7 @@
   </ion-navbar>
   <ion-searchbar [showCancelButton]="true" (ionCancel)="searching=!searching" *ngIf="searching" placeholder="Busca rutas"></ion-searchbar>
 </ion-header>
-<ion-content class="page-about">
+<ion-content class="page-about animated fadeIn fast">
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content>
     </ion-refresher-content>
@@ -27,7 +27,7 @@
       <hr>
       <p>{{ rutaPrueba.recorrido }} {{ rutaPrueba.distancia }}</p>
       <ion-avatar item-start>
-          <img src="https://img.milanuncios.com/fg/1914/74/191474936_1.jpg?">
+        <img src="https://img.milanuncios.com/fg/1914/74/191474936_1.jpg?">
       </ion-avatar>
       <i class="fa fa-user fa-lg"></i>
       <i class="fa fa-user fa-lg"></i>
@@ -44,11 +44,11 @@
       <h2>
         <strong>Alisos</strong>
       </h2>
-        <span item-end class="iconos-sm border-zero">
-          <ion-icon color="danger" class="parpadea">
-            <i class="fa fa-circle"></i>
-          </ion-icon>
-        </span>
+      <span item-end class="iconos-sm border-zero">
+        <ion-icon color="danger" class="parpadea">
+          <i class="fa fa-circle"></i>
+        </ion-icon>
+      </span>
       <hr>
       <p>
         Playa de la arena - Punta Anaga Baja (43 km)

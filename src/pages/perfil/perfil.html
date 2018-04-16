@@ -4,7 +4,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="page-perfil">
+<ion-content class="page-perfil animated fadeIn fast">
   <ion-card class="border-card perfil-card">
     <ion-item class="perfil-card">
       <img src="https://pbs.twimg.com/profile_images/426033231977136128/31XCyLMF.jpeg" class="image-perfil" item-left>
@@ -12,15 +12,15 @@
         <b>José Portelo</b>
       </label>
       <hr>
-      <label class="correoLabel">juanjojj@gmail.com
-        <i class="fa fa-envelope-o"></i>
-      </label>
-      <hr>
       <a href="https://api.whatsapp.com/send?phone=34671202477&text=">
-        <label class="chip">+34 654 542 254
+        <label class="chip">Contactar
           <i class="fa fa-whatsapp fa-1x fa-green"></i>
         </label>
       </a>
+      <hr>
+      <label class="correoLabel"><small>juanjojj23@gmail.com</small>
+        <i class="fa fa-envelope-o"></i>
+      </label>
     </ion-item>
   </ion-card>
 
@@ -33,7 +33,7 @@
       <ion-slide>
         <ion-card-content>
           <ion-list>
-            <button ion-item text-center (click)="onClickedItem()">Alisos (c/ La Matanza de Acentejo - AtoS SC)</button>
+            <button ion-item text-center (click)="onClickedItem()"><b>Alisos</b> <small>(c/ La Matanza de Acentejo - AtoS SC)</small></button>
           </ion-list>
           <div #map id="map"></div>
         </ion-card-content>
@@ -42,7 +42,7 @@
       <ion-slide>
         <ion-card-content>
           <!--  -->
-          <button ion-item (click)="onClickedItem()"> Pochinki (Adeje - Punta Anaga Alta)</button>
+          <button ion-item (click)="onClickedItem()"><b>Pochinki</b> <small>(Adeje - Punta Anaga Alta)</small></button>
           <ion-item>
             <div #map id="map"></div>
           </ion-item>

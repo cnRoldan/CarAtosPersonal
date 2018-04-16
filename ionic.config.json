@@ -1,6 +1,6 @@
 {
   "name": "CarATOS",
-  "app_id": "",
+  "app_id": "220359cf",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

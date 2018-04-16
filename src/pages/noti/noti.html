@@ -4,64 +4,70 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="page-about">
+<ion-content class="page-about animated fadeIn fast">
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content>
     </ion-refresher-content>
   </ion-refresher>
-
+  
   <ion-list class="border-rad">
+    <ion-item class="bgheader2" text-center>
+      <label class="chip"> 22/04/2018</label>
+    </ion-item>
     <ion-item-sliding *ngIf="!show">
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="https://images.clarin.com/2018/04/10/r1e5Ljqjf_930x525__1.jpg">
-        </ion-avatar>
-        <h2>
-          <strong>Benjamito ha salido de la ruta</strong>
-        </h2>
-        <p>Benjamito, ha dejado de compartir el coche contigo.</p>
-      </ion-item>
-      <ion-item-options side="right">
-        <button ion-button color="danger" (click)="show = !show">
-          <ion-icon name="trash"></ion-icon>
-          Borrar
-        </button>
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <ion-item-sliding *ngIf="!show2">
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="https://ep00.epimg.net/elcomidista/imagenes/2011/10/26/articulo/1319601600_131960_1319601600_noticia_normal.jpg">
-        </ion-avatar>
-        <h2>
-          <strong>Juan Palomo quiere ser tu amigo</strong>
-        </h2>
-        <p>Juan, quiere ser tu amigo. ¡Acéptalo!</p>
-      </ion-item>
-      <ion-item-options side="right">
-        <button ion-button color="danger" (click)="show2 = !show2">
-          <ion-icon name="trash"></ion-icon>
-          Borrar
-        </button>
-      </ion-item-options>
-    </ion-item-sliding>
-    <ion-item-sliding *ngIf="!show3">
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="https://pbs.twimg.com/profile_images/426033231977136128/31XCyLMF.jpeg">
-        </ion-avatar>
-        <h2>
-          <strong>Claudio Roldán ha entrado a la ruta</strong>
-        </h2>
-        <p>¡Claudio ha entrado a tu ruta Alisos!</p>
-      </ion-item>
-      <ion-item-options side="right">
-        <button ion-button color="danger" (click)="show3 = !show3">
-          <ion-icon name="trash"></ion-icon>
-          Borrar
-        </button>
-      </ion-item-options>
-    </ion-item-sliding>
-  </ion-list>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="https://images.clarin.com/2018/04/10/r1e5Ljqjf_930x525__1.jpg">
+          </ion-avatar>
+          <h2>
+            <strong>Benjamito ha salido de la ruta</strong>
+          </h2>
+          <p>Benjamito, ha dejado de compartir el coche contigo.</p>
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="danger" (click)="show = !show">
+            <ion-icon name="trash"></ion-icon>
+            Borrar
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+      
+      <ion-item class="bgheader2" text-center>
+          <label class="chip"> 21/04/2018</label>
+        </ion-item>
+      <ion-item-sliding *ngIf="!show2">
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="https://ep00.epimg.net/elcomidista/imagenes/2011/10/26/articulo/1319601600_131960_1319601600_noticia_normal.jpg">
+          </ion-avatar>
+          <h2>
+            <strong>Juan Palomo quiere ser tu amigo</strong>
+          </h2>
+          <p>Juan, quiere ser tu amigo. ¡Acéptalo!</p>
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="danger" (click)="show2 = !show2">
+            <ion-icon name="trash"></ion-icon>
+            Borrar
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+      <ion-item-sliding *ngIf="!show3">
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="https://pbs.twimg.com/profile_images/426033231977136128/31XCyLMF.jpeg">
+          </ion-avatar>
+          <h2>
+            <strong>Claudio Roldán ha entrado a la ruta</strong>
+          </h2>
+          <p>¡Claudio ha entrado a tu ruta Alisos!</p>
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="danger" (click)="show3 = !show3">
+            <ion-icon name="trash"></ion-icon>
+            Borrar
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
 </ion-content>

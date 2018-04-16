@@ -4,7 +4,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="page-nuevaRuta">
+<ion-content padding class="page-nuevaRuta animated fadeIn fast">
 
   <ion-card class="border-rad">
     <ion-list>
@@ -30,7 +30,12 @@
       </ion-item>
       <hr>
       <ion-item>
-        <ion-label color="primary" fixed>Pasajeros</ion-label>
+        <ion-label color="primary" fixed>Plazas</ion-label>
+        <ion-input type="number" min="1" max="4" value="1" name="plazas"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label color="primary" floating>Descripción</ion-label>
+        <ion-textarea color="primary" rows="4" maxLength="300" name="descripcion"></ion-textarea>
       </ion-item>
     </ion-list>
   </ion-card>
@@ -44,7 +49,6 @@
   <div *ngFor="let dia of diasSemana">
     <ion-list *ngIf="selected==dia.inicial" ngSelected="selected" class="slide-in-both-ways">
       <ion-card class="border-rad">
-        <ion-list>
           <ion-item>
             <ion-label color="primary">Salida</ion-label>
             <ion-datetime [(ngModel)]="dia.salida" displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
@@ -54,12 +58,11 @@
             <ion-label color="primary">Llegada</ion-label>
             <ion-datetime [(ngModel)]="dia.llegada" displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
           </ion-item>
-        </ion-list>
       </ion-card>
     </ion-list>
   </div>
 
-
+  <!-- SE2 -->
 
 
   <button color="success" ion-button block full round center class="button-bottom">Crear</button>
