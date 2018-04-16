@@ -5,13 +5,13 @@ export class Ruta {
   destino: string;
   nombre: string;
   ocupantes: number;
-  owner: Usuario;
+  owner: string;
   plazas: number;
   salida: string;
   descripcion:string;
   semana: Day[];
 
-  constructor (  destino: string,nombre: string,ocupantes: number,owner: Usuario,plazas: number,salida: string,descripcion:string,semana: Day[]) {
+  constructor (  destino: string,nombre: string,ocupantes: number,owner: string,plazas: number,salida: string,descripcion:string,semana: Day[]) {
     this.destino=destino;
     this.nombre=nombre;
     this.ocupantes=ocupantes;
