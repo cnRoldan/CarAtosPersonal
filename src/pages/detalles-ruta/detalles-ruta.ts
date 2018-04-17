@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Day } from '../../classes/Day';
 import { DataService } from '../../services/datos.service';
-//import { Ruta } from '../../interfaces/ruta.interface';
 import { Observable } from "rxjs"
 import { Ruta } from '../../classes/Ruta';
 import { forEach } from '@firebase/util';
@@ -14,41 +13,37 @@ import { forEach } from '@firebase/util';
   templateUrl: 'detalles-ruta.html',
 })
 export class DetallesRutaPage {
-  items:any;
-
+  ruta:Ruta;
+  plazasO:Array<number> = [0,1,2,3,4];
+  plazasL:Array<number> = [0,1,2,3,4];
   observable:any;
   
   selected:string="L";
-
-  lunes = new Day("L");
-  martes = new Day("M");
-  miercoles = new Day("X");
-  jueves = new Day("J");
-  viernes = new Day("V");
   
-  diasSemana:Day[] = [
-    this.lunes,
-    this.martes,
-    this.miercoles,
-    this.jueves,
-    this.viernes
-  ];
-
   constructor(public navCtrl: NavController, public navParams: NavParams, public bd:DataService) {
-    this.lunes._horaLl = "21:00";
-    this.martes._horaLl = "21:00";
-    this.miercoles._horaLl = "22:00";
-    this.jueves._horaLl="00:00";
-    this.viernes._horaLl="13:00";
-    this.observable = this.bd.getRuta("B4UoQxGQ4UbHSTQOZXBU")
-    this.observable.map(res => {
-      this.items = res;
-    }).subscribe();
+    
+    this.observable = this.bd.getRuta("0jMBboeJTwBXK9D1eJUg")
+      this.observable.map(res => {
+        this.ruta = res;
+        for (let i = 0; i < this.ruta.ocupantes; i++) {
+          this.plazasL.splice(0, 1);
+        }
+        for (let i = 0; i < 5 - this.ruta.ocupantes; i++) {
+          this.plazasO.splice(0, 1);
+        }
+      }).subscribe();
+
+      
+ 
   }
+
   prueba(){
-    console.log(this.items.nombre);
+    console.log(this.plazasO);
+    console.log(this.plazasL);
+    console.log(this.ruta);
   }
   ionViewDidLoad() {
+    
     console.log('ionViewDidLoad DetallesRutaPage');
   }
 
