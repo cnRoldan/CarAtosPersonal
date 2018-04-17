@@ -25,10 +25,10 @@ export class DetallesRutaPage {
     this.observable = this.bd.getRuta("0jMBboeJTwBXK9D1eJUg")
       this.observable.map(res => {
         this.ruta = res;
-        for (let i = 0; i < this.ruta.ocupantes; i++) {
+        for (let i = 0; i < this.ruta.getOcupantes; i++) {
           this.plazasL.splice(0, 1);
         }
-        for (let i = 0; i < 5 - this.ruta.ocupantes; i++) {
+        for (let i = 0; i < 5 - this.ruta.getOcupantes; i++) {
           this.plazasO.splice(0, 1);
         }
       }).subscribe();
@@ -39,7 +39,7 @@ export class DetallesRutaPage {
 
   prueba(){
     console.log(this.plazasO);
-    console.log(this.plazasL);
+    console.log(this.ruta.getOcupantes);
     console.log(this.ruta);
   }
   ionViewDidLoad() {
