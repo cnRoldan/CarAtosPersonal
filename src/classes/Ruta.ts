@@ -14,16 +14,16 @@ export class Ruta {
   private semana: Day[];
   private integrantes: Integrantes[];
 
-  constructor ( long:string,
-                lati:string,
-                destino: string,
-                nombre: string,
-                ocupantes: number,
-                owner: string,
-                plazas: number,
-                origen: string,
-                descripcion:string,
-                semana: Day[]) {
+  constructor ( long?:string,
+                lati?:string,
+                destino?: string,
+                nombre?: string,
+                ocupantes?: number,
+                owner?: string,
+                plazas?: number,
+                origen?: string,
+                descripcion?:string,
+                semana?: Day[]) {
     this.lati=lati;
     this.long=long;                  
     this.destino=destino;
