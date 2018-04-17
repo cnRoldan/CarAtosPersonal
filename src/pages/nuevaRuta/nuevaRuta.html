@@ -18,31 +18,28 @@
       <hr>
       <ion-item>
         <ion-label color="primary" fixed>Origen</ion-label>
-        <!-- <ion-input 
+        <ion-input 
           placeholder="Introduzca dirección" 
           autocorrect="off" autocapitalize="off" spellcheck="off" type="text" 
-          class="form-control" #search [formControl]="searchControl" [(ngModel)]="ruta.salida">
-        </ion-input> -->
+          class="autoCompleteField" #search [formControl]="searchControl" [(ngModel)]="ruta.salida" id="autocompleteField">
+        </ion-input>
       </ion-item>
-      <div class="form-group">
+      <!-- <div class="form-group">
         <input placeholder="Buscar direccion" autocorrect="off" autocapitalize="off" 
           spellcheck="off" type="text" class="form-control formAutocomplete" #search [formControl]="searchControl">
-      </div>
-      <!-- <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
-        <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
-      </agm-map> -->
+      </div> -->
       <hr>
       <ion-item>
         <ion-label color="primary" fixed>Destino</ion-label>
-        <ion-select [(ngModel)]="ruta.destino" >
-          <ion-option value="S/C">AtoS Consulting Canarias S/C</ion-option>
-          <ion-option value="AGA">AtoS Granadilla de Abona</ion-option>
+        <ion-select class="selectCenter" interface="action-sheet" [(ngModel)]="ruta.destino" placehorder="Seleccione un centro de AtoS">
+          <ion-option  value="S/C" >AtoS Consulting Canarias S/C</ion-option>
+          <ion-option  value="AGA">AtoS Granadilla de Abona</ion-option>
         </ion-select>
       </ion-item>
       <hr>
       <ion-item>
         <ion-label color="primary" fixed>Plazas</ion-label>
-        <ion-input type="number" min="1" max="4" value="1" name="plazas" [(ngModel)]="ruta.plazas"></ion-input>
+        <ion-input type="number" min="1" max="4" value="1" name="plazas" [(ngModel)]="ruta.plazas" item-end></ion-input>
       </ion-item>
       <ion-item >
         <ion-label color="primary" floating>Descripción</ion-label>

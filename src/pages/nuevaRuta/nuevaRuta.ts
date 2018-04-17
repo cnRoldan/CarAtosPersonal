@@ -36,8 +36,8 @@ export class nuevaRutaPage implements OnInit {
   public searchControl: FormControl;
   public zoom: number;
 
-  @ViewChild("search")
-  public searchElementRef: ElementRef;
+  // @ViewChild("search")
+  // public searchElementRef: ElementRef;
 
   ruta: Ruta = new Ruta("", "", 1, "Usuarios/eXcFeUe460gAqRYQBVQl", 1, "", "", this.diasSemana);
 
@@ -45,6 +45,8 @@ export class nuevaRutaPage implements OnInit {
     private ngZone: NgZone) {
 
   }
+
+
 
   ngOnInit() {
     //set google maps defaults
@@ -60,7 +62,8 @@ export class nuevaRutaPage implements OnInit {
 
     //load Places Autocomplete
     this.mapsAPILoader.load().then(() => {
-      let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
+      let fieldElement = document.getElementById('autocompleteField').getElementsByTagName('input')[0];
+      let autocomplete = new google.maps.places.Autocomplete(fieldElement, {
       });
       autocomplete.addListener("place_changed", () => {
         this.ngZone.run(() => {
