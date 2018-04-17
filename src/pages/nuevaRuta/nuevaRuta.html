@@ -18,8 +18,19 @@
       <hr>
       <ion-item>
         <ion-label color="primary" fixed>Origen</ion-label>
-        <ion-input [(ngModel)]="ruta.salida"></ion-input>
+        <!-- <ion-input 
+          placeholder="Introduzca dirección" 
+          autocorrect="off" autocapitalize="off" spellcheck="off" type="text" 
+          class="form-control" #search [formControl]="searchControl" [(ngModel)]="ruta.salida">
+        </ion-input> -->
       </ion-item>
+      <div class="form-group">
+        <input placeholder="Buscar direccion" autocorrect="off" autocapitalize="off" 
+          spellcheck="off" type="text" class="form-control formAutocomplete" #search [formControl]="searchControl">
+      </div>
+      <!-- <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+        <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+      </agm-map> -->
       <hr>
       <ion-item>
         <ion-label color="primary" fixed>Destino</ion-label>

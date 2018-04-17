@@ -17,7 +17,7 @@ import { NotiPage } from '../pages/noti/noti';
 import { Ionic2RatingModule } from "ionic2-rating";
 
 // Servicios
-
+import { AgmCoreModule } from '@agm/core';
 import { DataService } from "../services/datos.service";
 
 //Firebase
@@ -46,7 +46,8 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 import { HttpClientModule} from '@angular/common/http';
 import { HttpModule } from '@angular/http';
-
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -69,7 +70,13 @@ import { HttpModule } from '@angular/http';
     AngularFireModule.initializeApp(firebaseConfig,'carATOS'),
     AngularFireDatabaseModule,
     AngularFirestoreModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    FormsModule,
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: "",
+      libraries: ["places"]
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
