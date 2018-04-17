@@ -67,7 +67,7 @@ export class AuthServiceProvider {
 
 
   constructor(public http: HttpClient) {
-    console.log('Hello AuthServiceProvider Provider');
+    console.log('Hello AuthServiceProvider Provider, este console log me tiene loco ya....');
   }
 
 }
