@@ -1,10 +1,9 @@
 export interface Usuario {
-    apellidos: string;
-    avatar: URL;
-    das: string;
-    nombre: string;
-    movil:string;
+    nombre:string;
+    apellidos:string;
+    das:string;
+    avatar:string;
+    movil:number;
     correo:string;
-    password: string;
-    key$?: string;
+    password:string;
 }

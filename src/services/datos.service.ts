@@ -24,6 +24,11 @@ export class DataService {
   getUsers(){
     return this.users.valueChanges();
   }
+  getUserRutes(userId:string){
+    return this.db.collection('/Rutas', ref =>{
+      return ref.where("owner","==",userId)
+    }).valueChanges();
+  }
   setUser(item:any){
     this.users.add(item);
   }

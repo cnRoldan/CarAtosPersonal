@@ -9,14 +9,12 @@ import { DataService } from '../../services/datos.service'
   templateUrl: 'nuevaRuta.html'
 })
 export class nuevaRutaPage {
-
   selected:string="L";
   lunes = new Day("L");
   martes = new Day("M");
   miercoles = new Day("X");
   jueves = new Day("J");
   viernes = new Day("V");
-
   diasSemana:Day[] = [
     this.lunes,
     this.martes,
@@ -25,7 +23,7 @@ export class nuevaRutaPage {
     this.viernes
   ];
 
-  ruta:Ruta=new Ruta("","",1,"Usuarios/eXcFeUe460gAqRYQBVQl",1,"","",this.diasSemana);
+  ruta:Ruta=new Ruta("","","","",0,"bclO18rIZe5BxvH39wfE",1,"","",this.diasSemana);
 
    constructor(public navCtrl: NavController,public _dataService:DataService) {
 
