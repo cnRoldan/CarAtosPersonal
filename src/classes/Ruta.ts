@@ -4,8 +4,8 @@ import { RutaInterface } from "../interfaces/ruta.interface";
 
 
 export class Ruta implements RutaInterface {
-  lati: string;
-  long: string;
+  lati: number;
+  long: number;
   destino: string;
   nombre: string;
   ocupantes: number;
@@ -16,8 +16,9 @@ export class Ruta implements RutaInterface {
   semana: Day[];
   integrantes: Integrantes[];
 
-  constructor(long: string,
-    lati: string,
+  constructor(
+    long: number,
+    lati: number,
     destino: string,
     nombre: string,
     ocupantes: number,
@@ -40,10 +41,10 @@ export class Ruta implements RutaInterface {
   }
 
   //getter
-  public get getLati(): string {
+  public get getLati(): number {
     return this.lati;
   }
-  public get getLong(): string {
+  public get getLong(): number {
     return this.long;
   }
   public get getDestino(): string {
@@ -74,10 +75,10 @@ export class Ruta implements RutaInterface {
     return this.integrantes;
   }
   //setter
-  public set setLati(input: string) {
+  public set setLati(input: number) {
     this.lati = input;
   }
-  public set setLong(input: string) {
+  public set setLong(input: number) {
     this.long = input;
   }
   public set setDestino(input: string) {

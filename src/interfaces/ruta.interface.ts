@@ -1,11 +1,11 @@
-import { Usuario } from "./usuario.interface";
+import { UsuarioInterface } from "./usuario.interface";
 import { DayInterface } from "./dia.interface";
 import { IntegrantesInterface } from "./integrantes.interface";
 
 
 export interface RutaInterface{
-    lati:string;
-    long:string;
+    lati:number;
+    long:number;
     destino: string;
     nombre: string;
     ocupantes: number;

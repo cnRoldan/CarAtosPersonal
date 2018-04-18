@@ -17,31 +17,23 @@
       </ion-item>
       <hr>
       <ion-item>
-        <ion-label color="primary" fixed>Origen</ion-label>
-        <ion-input 
-          placeholder="Introduzca dirección" 
-          autocorrect="off" autocapitalize="off" spellcheck="off" type="text" 
-          class="autoCompleteField" #search [formControl]="searchControl" [(ngModel)]="ruta.salida" id="autocompleteField" required>
+        <ion-label color="primary" floating>Direccion de origen</ion-label>
+        <ion-input autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="autoCompleteField" #search [formControl]="searchControl"
+          id="autocompleteField" required>
         </ion-input>
       </ion-item>
-      <!-- <div class="form-group">
-        <input placeholder="Buscar direccion" autocorrect="off" autocapitalize="off" 
-          spellcheck="off" type="text" class="form-control formAutocomplete" #search [formControl]="searchControl">
-      </div> -->
-      <hr>
       <ion-item>
-        <ion-label color="primary" fixed>Destino</ion-label>
-        <ion-select class="selectCenter" interface="action-sheet" [(ngModel)]="ruta.destino" placehorder="Seleccione un centro de AtoS">
-          <ion-option  value="S/C" >AtoS Consulting Canarias S/C</ion-option>
-          <ion-option  value="AGA">AtoS Granadilla de Abona</ion-option>
+        <ion-label color="primary" floating>Centro AtoS</ion-label>
+        <ion-select placehorder="placeHolder" class="selectCenter" interface="action-sheet" [(ngModel)]="ruta.destino">
+          <ion-option value="S/C">AtoS Consulting Canarias S/C</ion-option>
+          <ion-option value="AGA">AtoS Granadilla de Abona</ion-option>
         </ion-select>
       </ion-item>
-      <hr>
       <ion-item>
-        <ion-label color="primary" fixed>Plazas</ion-label>
-        <ion-input type="number" min="1" max="4" value="1" name="plazas" [(ngModel)]="ruta.plazas" item-end></ion-input>
+        <ion-label color="primary" floating>Número de plazas</ion-label>
+        <ion-input type="number" max="4" name="plazas" [(ngModel)]="ruta.plazas" item-end></ion-input>
       </ion-item>
-      <ion-item >
+      <ion-item>
         <ion-label color="primary" floating>Descripción</ion-label>
         <ion-textarea color="primary" rows="4" maxLength="300" [(ngModel)]="ruta.descripcion"></ion-textarea>
       </ion-item>
@@ -54,23 +46,23 @@
     </ion-segment>
   </div>
 
-  <div *ngFor="let dia of diasSemana">
+  <div *ngFor="let dia of diasSemana; let i = index">
     <ion-list *ngIf="selected==dia.nombre" ngSelected="selected" class="slide-in-both-ways">
       <ion-card class="border-rad">
-          <ion-item>
-            <ion-label color="primary">Salida</ion-label>
-            <ion-datetime [(ngModel)]="dia.horaS" displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
-          </ion-item>
-          <hr>
-          <ion-item>
-            <ion-label color="primary">Llegada</ion-label>
-            <ion-datetime [(ngModel)]="dia.horaLl" displayFormat="HH:mm" placeholder="Introduce hora..."></ion-datetime>
-          </ion-item>
+        <ion-item>
+          <ion-label *ngIf="dia.horaS!=null" color="primary">Salida</ion-label>
+          <ion-datetime [(ngModel)]="dia.horaS" displayFormat="HH:mm" (ionChange)="autocompletarHorarios()" placeholder="¿A qué hora sales de casa?"></ion-datetime>
+        </ion-item>
+        <hr>
+        <ion-item>
+          <ion-label *ngIf="dia.horaLl!=null" color="primary">Salida de trabajo</ion-label>
+          <ion-datetime [(ngModel)]="dia.horaLl" displayFormat="HH:mm" (ionChange)="autocompletarHorarios()" placeholder="¿A qué hora sales de trabajar?"></ion-datetime>
+        </ion-item>
       </ion-card>
     </ion-list>
   </div>
 
-  <!-- SE2 -->
+
 
 
   <button color="success" ion-button block full round center class="button-bottom" (click)="crearRuta()">Crear</button>
