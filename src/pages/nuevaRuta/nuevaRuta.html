@@ -21,7 +21,7 @@
         <ion-input 
           placeholder="Introduzca dirección" 
           autocorrect="off" autocapitalize="off" spellcheck="off" type="text" 
-          class="autoCompleteField" #search [formControl]="searchControl" [(ngModel)]="ruta.salida" id="autocompleteField">
+          class="autoCompleteField" #search [formControl]="searchControl" [(ngModel)]="ruta.salida" id="autocompleteField" required>
         </ion-input>
       </ion-item>
       <!-- <div class="form-group">

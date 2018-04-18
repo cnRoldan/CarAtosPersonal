@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="secondary">
-    <ion-title>Detalle de ruta</ion-title>
+    <ion-title *ngIf="ruta">{{ ruta.nombre }}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -15,55 +15,48 @@
         <small class="nombre-usuario">Usuario98</small>
       </div>
 
-      <ion-list>
+      <ion-list *ngIf="ruta">
         <ion-label item-right>
-          <strong>De: </strong> Adeje</ion-label>
+          <strong>De: </strong>{{ ruta.origen }}</ion-label>
         <ion-label item-right>
-          <strong>Hasta: </strong> Punta Anaga alta</ion-label>
+          <strong>Hasta: </strong> {{ ruta.destino }} </ion-label>
         <ion-label item-right>
           <strong>Plazas: </strong>
-          <i class="fa fa-user fa-lg"></i>
-          <i class="fa fa-user fa-lg"></i>
-          <i class="fa fa-user fa-lg"></i>
-          <i class="fa fa-user fa-lg"></i>
-          <i class="fa fa-user fa-lg sitio-libre"></i>
+          <i class="fa fa-user fa-lg" *ngFor="let plaza of plazasO"></i>
+          <i class="fa fa-user fa-lg sitio-libre" *ngFor="let plaza of plazasL"></i>
         </ion-label>
       </ion-list>
 
     </ion-row>
   </ion-card>
 
-  <div class="segment-div" margin="2">
+  <div class="segment-div" margin="2" *ngIf="ruta">
     <ion-segment class="segment" [(ngModel)]="selected">
-      <ion-segment-button class="segment-button" *ngFor="let dia of diasSemana" [value]="dia.nombre">{{dia.nombre}}</ion-segment-button>
+      <ion-segment-button class="segment-button" *ngFor="let dia of ruta.semana" [value]="dia.nombre">{{dia.nombre}}</ion-segment-button>
     </ion-segment>
   </div>
-
-  <div *ngFor="let dia of diasSemana">
-    <ion-list *ngIf="selected==dia.nombre" ngSelected="selected" class="slide-in-both-ways">
-      <ion-card class="border-rad">
-        <ion-list>
-          <ion-item>
-            <ion-label color="primary">Salida</ion-label>
-            <ion-datetime [(ngModel)]="dia.horaS" displayFormat="HH:mm"></ion-datetime>
-          </ion-item>
-          <hr>
-          <ion-item>
-            <ion-label color="primary">Llegada</ion-label>
-            <ion-datetime [(ngModel)]="dia.horaLl" displayFormat="HH:mm"></ion-datetime>
-          </ion-item>
-        </ion-list>
-      </ion-card>
-    </ion-list>
-  </div>
-  <hr>
+  <span *ngIf="ruta">
+    <div *ngFor="let dia of ruta.semana">
+      <ion-list *ngIf="selected==dia.nombre" ngSelected="selected" class="slide-in-both-ways">
+        <ion-card class="border-rad">
+          <ion-list>
+            <ion-item>
+              <ion-label color="primary">Salida</ion-label>
+              <ion-datetime disabled [(ngModel)]="dia.horaS" displayFormat="HH:mm"></ion-datetime>
+            </ion-item>
+            <hr>
+            <ion-item>
+              <ion-label color="primary">Llegada</ion-label>
+              <ion-datetime disabled [(ngModel)]="dia.horaLl" displayFormat="HH:mm"></ion-datetime>
+            </ion-item>
+          </ion-list>
+        </ion-card>
+      </ion-list>
+    </div>
+  </span>
   <h4 padding-left>Descripción:</h4>
-  <p padding-left>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
+  <p padding-left *ngIf="ruta">{{ ruta.descripcion }}</p>
   <ion-item>
-    <ion-label>Precio/Día : 1€ </ion-label>
-  </ion-item>
-  <ion-item>
-    <button color="success" ion-button full round padding>Solicitar</button>
+    <button color="success" ion-button full round padding (click)="prueba()">Solicitar</button>
   </ion-item>
 </ion-content>

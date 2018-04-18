@@ -22,8 +22,7 @@ export class nuevaRutaPage implements OnInit {
   miercoles = new Day("X");
   jueves = new Day("J");
   viernes = new Day("V");
-
-  diasSemana: Day[] = [
+  diasSemana:Day[] = [
     this.lunes,
     this.martes,
     this.miercoles,
@@ -39,13 +38,13 @@ export class nuevaRutaPage implements OnInit {
   // @ViewChild("search")
   // public searchElementRef: ElementRef;
 
-  ruta: Ruta = new Ruta("", "", 1, "Usuarios/eXcFeUe460gAqRYQBVQl", 1, "", "", this.diasSemana);
 
   constructor(public navCtrl: NavController, public _dataService: DataService, private mapsAPILoader: MapsAPILoader,
     private ngZone: NgZone) {
-
-  }
-
+      
+    }
+    
+    ruta:Ruta=new Ruta("","","","",0,"bclO18rIZe5BxvH39wfE",1,"","",this.diasSemana);
 
 
   ngOnInit() {

@@ -7,15 +7,19 @@ export class Day {
     this.nombre=nombre;
   }
 
-  get _horaLl():string {
+  get getHoraLl():string {
     return this.horaLl;
   }
 
-  set _horaLl(value:string){
+  get getHoraS():string {
+    return this.horaS;
+  }
+
+  set setHoraLl(value:string){
     this.horaLl = value;
   }
 
-  set _salidaS(value:string){
+  set setSalidaS(value:string){
     this.horaS = value;
   }
 

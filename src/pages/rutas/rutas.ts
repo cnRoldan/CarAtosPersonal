@@ -22,7 +22,6 @@ export class RutasPage {
 
 
   onClickedItem(ruta){
-    console.log(ruta);
     this.navCtrl.push(DetallesRutaPage);
   }
 
