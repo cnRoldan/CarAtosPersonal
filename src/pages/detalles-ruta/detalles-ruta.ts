@@ -6,6 +6,9 @@ import { Observable } from "rxjs"
 import { Ruta } from '../../classes/Ruta';
 import { forEach } from '@firebase/util';
 
+//Loading
+import { LoadingController } from 'ionic-angular';
+
 
 @IonicPage()
 @Component({
@@ -20,8 +23,13 @@ export class DetallesRutaPage {
   
   selected:string="L";
   
-  constructor(public navCtrl: NavController, public navParams: NavParams, public bd:DataService) {
-    
+
+  loader:any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public bd:DataService, public loadingCtrl:LoadingController) {
+    //Llamada del método Loading
+    this.presentLoading();
+
     this.observable = this.bd.getRuta("0jMBboeJTwBXK9D1eJUg")
       this.observable.map(res => {
         this.ruta = res;
@@ -31,10 +39,19 @@ export class DetallesRutaPage {
         for (let i = 0; i < 5 - this.ruta.getOcupantes; i++) {
           this.plazasO.splice(0, 1);
         }
+        this.loader.dismiss();
       }).subscribe();
 
       
  
+  }
+
+  //Método para llamar al Loading
+  presentLoading() {
+    this.loader = this.loadingCtrl.create({
+      content: "Cargando ruta",
+    });
+    this.loader.present();    
   }
 
   prueba(){
