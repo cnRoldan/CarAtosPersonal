@@ -39,6 +39,7 @@ const firebaseConfig = {
 
 // Geolocation providers
 import { Geolocation } from '@ionic-native/geolocation';
+import {ReactiveFormsModule} from '@angular/forms';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -47,7 +48,6 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { HttpClientModule} from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
